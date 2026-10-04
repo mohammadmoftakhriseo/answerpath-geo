@@ -15,3 +15,9 @@ classifiers = ["License :: OSI Approved :: MIT License", "Programming Language :
 
 [project.scripts]
 answerpath = "answerpath_geo.cli:main"
+
+[project.urls]
+Homepage = "https://molavi.pro"
+Repository = "https://github.com/tmolavi/answerpath-geo"
+Documentation = "https://github.com/tmolavi/answerpath-geo#readme"
+Issues = "https://github.com/tmolavi/answerpath-geo/issues"
