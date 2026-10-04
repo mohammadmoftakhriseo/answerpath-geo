@@ -31,6 +31,25 @@ python3 -m venv .venv
 .venv/bin/pip install -e .
 ```
 
+## PyPI publishing
+
+The stable package is available at [PyPI](https://pypi.org/project/answerpath-geo/).
+Future releases are published from GitHub Actions through Trusted Publishing;
+no PyPI token is stored in the repository.
+
+To publish a new version:
+
+1. Update the version in `pyproject.toml`.
+2. Commit and push the release changes to `main`.
+3. Create a **published GitHub Release** for the matching version.
+
+The workflow is [`.github/workflows/publish.yml`](.github/workflows/publish.yml)
+and uses the `pypi` GitHub environment for `tmolavi/answerpath-geo`. The
+PyPI-side publisher must remain mapped to Owner `tmolavi`, Repository
+`answerpath-geo`, Workflow `publish.yml`, Environment `pypi`.
+
+Do not put a PyPI API token in GitHub secrets or commit it to this repository.
+
 ## Quick start
 
 Create a prompt map for a service or keyword:
@@ -194,4 +213,3 @@ We welcome contributions to query mining, clustering algorithms, and demand stra
 
 Developed by **Taghi Molavi** — [molavi.pro](https://molavi.pro)  
 MIT. See [LICENSE](LICENSE).
-
