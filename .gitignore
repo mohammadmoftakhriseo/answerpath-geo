@@ -1,0 +1,24 @@
+# Security & Sensitive Files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.sql
+*.zip
+*.tar.gz
+
+# Logs & Temporary Files
+error_log
+*.log
+storage/logs/*
+storage/locks/*
+!storage/logs/.gitkeep
+!storage/locks/.gitkeep
+
+# OS / IDE Artifacts
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
