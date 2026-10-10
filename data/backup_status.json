@@ -1,0 +1,7 @@
+{
+    "backup_time": "2026-10-10 20:45:22",
+    "environment": "production (maaadmr.ir)",
+    "php_version": "8.1.34",
+    "sync_type": "Cloud Scheduled Snapshot",
+    "status": "healthy"
+}
