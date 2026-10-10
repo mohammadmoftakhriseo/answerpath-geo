@@ -513,6 +513,26 @@ $categoryInfo = $catMap[$article['schema_type'] ?? ''] ?? ['name' => 'سئوی �
             };
 
             $cleanArticleContent = $formatMarkdownToHtml($cleanArticleContent);
+
+            // ۵. تضمین قطعی عدم تکرار عنوان اصلی (H1) در اولین سرفصل بدنه (H2)
+            if (!empty($article['title'])) {
+                $normTitle = preg_replace('/[^\p{L}\p{N}]+/u', '', (string)$article['title']);
+                $cleanArticleContent = preg_replace_callback('/<h[12][^>]*>(.*?)<\/h[12]>/ui', function($m) use ($normTitle) {
+                    static $firstReplaced = false;
+                    if (!$firstReplaced) {
+                        $hText = preg_replace('/[^\p{L}\p{N}]+/u', '', strip_tags($m[1]));
+                        if (mb_strlen($hText) > 5 && mb_strlen($normTitle) > 5) {
+                            similar_text($hText, $normTitle, $percent);
+                            if ($percent > 65 || mb_strpos($hText, mb_substr($normTitle, 0, 20)) !== false || mb_strpos($normTitle, mb_substr($hText, 0, 20)) !== false) {
+                                $firstReplaced = true;
+                                return '<h2>۱. کالبدشکافی ریشه‌ای و تحلیل ساختاری مسئله</h2>';
+                            }
+                        }
+                    }
+                    return $m[0];
+                }, $cleanArticleContent, 1);
+            }
+
             echo trim($cleanArticleContent);
             ?>
         </div>
