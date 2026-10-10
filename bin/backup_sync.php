@@ -141,8 +141,38 @@ $directoriesToScan = [
     ROOT_PATH . '/bin',
 ];
 
+$rootFilesToScan = [
+    ROOT_PATH . '/index.php',
+    ROOT_PATH . '/tracker.php',
+    ROOT_PATH . '/robots.txt',
+    ROOT_PATH . '/bot-webhook.php',
+    ROOT_PATH . '/bale-webhook.php',
+    ROOT_PATH . '/.gitignore',
+];
+
 $syncedCount = 0;
 $skippedCount = 0;
+
+// آپلود فایل‌های روت
+foreach ($rootFilesToScan as $rootFilePath) {
+    if (!file_exists($rootFilePath)) continue;
+    $relPath = basename($rootFilePath);
+    $localContent = file_get_contents($rootFilePath);
+    if ($localContent === false) continue;
+
+    $existing = $gitService->getFile($relPath, $branch);
+    if ($existing !== null && trim($existing['content']) === trim($localContent)) {
+        $skippedCount++;
+        continue;
+    }
+
+    logMsg("Uploading root file: {$relPath}...");
+    $res = $gitService->pushFile($relPath, $localContent, "Auto-sync: update {$relPath}", $branch);
+    if ($res['success'] ?? false) {
+        $syncedCount++;
+    }
+}
+
 
 foreach ($directoriesToScan as $dir) {
     if (!is_dir($dir)) continue;
