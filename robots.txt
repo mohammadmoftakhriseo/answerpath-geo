@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /lead/
+
+Sitemap: https://maaadmr.ir/sitemap.xml
