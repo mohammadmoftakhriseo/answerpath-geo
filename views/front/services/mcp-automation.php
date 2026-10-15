@@ -47,6 +47,13 @@ $ctaButton = !empty($pageData['cta_button']) ? $pageData['cta_button'] : 'دری
             هوش مصنوعی عمومی دیگر کافی نیست. ما با استفاده از معماری <strong class="text-accent dark:text-blue-400 font-bold" dir="ltr">Model Context Protocol</strong>، دستیاران هوشمند (AI Agents) را مستقیماً به دیتابیس، CRM، و ابزارهای سازمانی شما متصل می‌کنیم. هوش مصنوعی حالا دقیقاً می‌داند در بیزینس شما چه می‌گذرد.
         </p>
 
+        <!-- دکمه منابع منتخب گوگل (Google Preferred Source) -->
+        <?php 
+        $brandName = 'محمد مفتخری';
+        $customClass = 'mb-8';
+        include VIEWS_PATH . '/front/partials/google-preferred-source.php'; 
+        ?>
+
         <!-- ویژگی‌های کلیدی سازمانی -->
         <div class="flex flex-wrap items-center justify-center gap-3 mb-10 text-xs text-slate-700 dark:text-slate-300">
             <span class="px-3.5 py-1.5 rounded-xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 flex items-center gap-1.5 shadow-sm font-bold">
