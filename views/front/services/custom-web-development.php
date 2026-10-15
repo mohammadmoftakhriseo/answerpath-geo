@@ -61,6 +61,13 @@
             ما برای کسب‌وکار شما یک سایت مهندسی‌شده و روان با کدنویسی تمیز (<span class="font-bold text-accent dark:text-blue-400">PHP و Tailwind CSS</span>) می‌سازیم؛ بدون استفاده از قالب‌های آماده و صفحه‌سازهای کند مانند المنتور. نتیجه؟ لود زیر ۱ ثانیه، رتبه‌گیری آسان در گوگل و تجربه خریدی که مشتری را شگفت‌زده می‌کند.
         </p>
 
+        <!-- دکمه منابع منتخب گوگل (Google Preferred Source) -->
+        <?php 
+        $brandName = 'محمد مفتخری';
+        $customClass = 'mb-8';
+        include VIEWS_PATH . '/front/partials/google-preferred-source.php'; 
+        ?>
+
         <!-- دکمه‌های اقدام (CTA) -->
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
             <a href="/start" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-accent hover:bg-accentHover text-white font-bold text-sm shadow-lg shadow-blue-900/20 active:scale-95 transition-all">
