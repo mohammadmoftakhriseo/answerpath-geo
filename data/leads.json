@@ -102,5 +102,32 @@
         "action_title": "💬 گفتگوی جدید کاربر با دستیار هوشمند AI",
         "has_ai_report": false,
         "logged_at": "2026-10-15 12:39:58"
+    },
+    {
+        "id": "lead_6ad0c14a914671.75626980",
+        "source": "notification_dispatcher",
+        "ip": "5.113.223.185",
+        "user_agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+        "created_at": "2026-10-15 15:34:26",
+        "full_name": "کاربر چت آنلاین",
+        "phone": "هنوز ثبت نشده (در حال چت)",
+        "website_url": null,
+        "message": "💬 پیام ۱ کاربر:\nسلام خوبی  من سلیام مشکل داره",
+        "service_requested": "دستیار فروش هوشمند (پیام ۱ از ۶)",
+        "source_cta": "ai_sales_chat",
+        "current_page": "/",
+        "user_journey": "/",
+        "user_journey_raw": [
+            "/"
+        ],
+        "utm_data": {
+            "referrer": "https://www.google.com/",
+            "utm_source": "Google Search (Organic)",
+            "utm_medium": "referral"
+        },
+        "ip_address": "5.113.223.185",
+        "action_title": "💬 گفتگوی جدید کاربر با دستیار هوشمند AI",
+        "has_ai_report": false,
+        "logged_at": "2026-10-15 15:34:27"
     }
 ]
