@@ -129,5 +129,32 @@
         "action_title": "💬 گفتگوی جدید کاربر با دستیار هوشمند AI",
         "has_ai_report": false,
         "logged_at": "2026-10-15 15:34:27"
+    },
+    {
+        "id": "lead_6ad0cdbcd7d189.48603906",
+        "source": "notification_dispatcher",
+        "ip": "155.254.35.237",
+        "user_agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+        "created_at": "2026-10-15 16:27:32",
+        "full_name": "کاربر چت آنلاین",
+        "phone": "هنوز ثبت نشده (در حال چت)",
+        "website_url": null,
+        "message": "💬 پیام ۱ کاربر:\nفروش و لید سایتم پایینه، چطور با CRO درستش کنم؟",
+        "service_requested": "دستیار فروش هوشمند (پیام ۱ از ۶)",
+        "source_cta": "ai_sales_chat",
+        "current_page": "/",
+        "user_journey": "/",
+        "user_journey_raw": [
+            "/"
+        ],
+        "utm_data": {
+            "referrer": "https://www.google.com/",
+            "utm_source": "Google Search (Organic)",
+            "utm_medium": "referral"
+        },
+        "ip_address": "155.254.35.237",
+        "action_title": "💬 گفتگوی جدید کاربر با دستیار هوشمند AI",
+        "has_ai_report": false,
+        "logged_at": "2026-10-15 16:27:33"
     }
 ]
