@@ -81,6 +81,23 @@ class SitemapController extends Controller
         $txt .= "Allow: /\n";
         $txt .= "Disallow: /admin\n";
         $txt .= "Disallow: /admin/\n\n";
+        
+        $txt .= "# AI Crawlers & LLM Agents\n";
+        $txt .= "User-agent: GPTBot\n";
+        $txt .= "Allow: /\n";
+        $txt .= "Allow: /llms.txt\n";
+        $txt .= "Allow: /ai-context.md\n\n";
+
+        $txt .= "User-agent: ClaudeBot\n";
+        $txt .= "Allow: /\n";
+        $txt .= "Allow: /llms.txt\n";
+        $txt .= "Allow: /ai-context.md\n\n";
+
+        $txt .= "User-agent: PerplexityBot\n";
+        $txt .= "Allow: /\n";
+        $txt .= "Allow: /llms.txt\n";
+        $txt .= "Allow: /ai-context.md\n\n";
+
         $txt .= "Sitemap: " . url('/sitemap.xml') . "\n";
 
         $response->header('Content-Type', 'text/plain; charset=utf-8');
