@@ -19,5 +19,23 @@
         "action_title": "💬 گفتگوی جدید کاربر با دستیار هوشمند AI",
         "has_ai_report": false,
         "logged_at": "2026-10-15 12:11:14"
+    },
+    {
+        "id": "lead_6ad091b0f19e32.51574522",
+        "source": "notification_dispatcher",
+        "ip": "155.254.35.237",
+        "user_agent": "Python-urllib/3.14",
+        "created_at": "2026-10-15 12:11:20",
+        "full_name": "کاربر چت آنلاین (09123456789)",
+        "phone": "09123456789",
+        "message": "پیام حاوی شماره:\nشماره تماسم ۰۹۱۲۳۴۵۶۷۸۹ هست لطفاً نقشه راه رو بفرستید",
+        "service_requested": "لید داغ چت‌بات (پیام 2)",
+        "source_cta": "ai_sales_chat",
+        "current_page": "/",
+        "user_journey": "/",
+        "ip_address": "155.254.35.237",
+        "action_title": "🔥 شماره تماس جدید در چت‌بات دریافت شد!",
+        "has_ai_report": false,
+        "logged_at": "2026-10-15 12:11:21"
     }
 ]
