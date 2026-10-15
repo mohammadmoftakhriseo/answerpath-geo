@@ -36,6 +36,13 @@
             <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
                 جهت ممیزی فنی و سرعت وب‌سایت، تدوین استراتژی جامع سئو یا پیاده‌سازی اتوماسیون هوش مصنوعی، اطلاعات پروژه خود را وارد فرمایید تا در کوتاه‌ترین زمان بررسی و تماس حاصل شود.
             </p>
+
+            <!-- دکمه منابع منتخب گوگل (Google Preferred Source) -->
+            <?php 
+            $brandName = 'محمد مفتخری';
+            $customClass = 'pt-2';
+            include VIEWS_PATH . '/front/partials/google-preferred-source.php'; 
+            ?>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
