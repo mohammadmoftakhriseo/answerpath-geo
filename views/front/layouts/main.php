@@ -25,7 +25,10 @@ if (empty($schemaJsonLd) && !empty($schemas) && is_array($schemas)) {
     <meta name="keywords" content="محمد مفتخری, Mohammad Moftakhari, Mohammad Moftakhar, Mohammad Moftakhari Rostamkhani, محمد مفتخری رستم خانی, maaadmr, maaad_mr, سئو, متخصص سئو, کارشناس سئو, دیجیتال مارکتینگ, اینتن">
     <meta name="author" content="Mohammad Moftakhari (محمد مفتخری)">
     <meta name="robots" content="index, follow">
+    <meta name="enamad" content="79378573">
     <link rel="canonical" href="<?= e($canonical ?? url('/')) ?>">
+    <link rel="alternate" type="text/plain" href="<?= url('/llms.txt') ?>" title="LLMs Context">
+    <link rel="alternate" type="text/plain" href="<?= url('/ai-context.md') ?>" title="AI Context Markdown">
     
     <!-- Open Graph -->
     <meta property="og:title" content="<?= e($title ?? 'محمد مفتخری (Mohammad Moftakhari) | متخصص سئو') ?>">
@@ -177,6 +180,9 @@ if (empty($schemaJsonLd) && !empty($schemas) && is_array($schemas)) {
             <?= $schemaJsonLd ?>
         </script>
     <?php endif; ?>
+
+    <!-- Google Preferred Sources (Subscribe with Google SDK) -->
+    <script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
 </head>
 <body class="antialiased selection:bg-accent selection:text-white flex flex-col min-h-screen dark:bg-[#0B1120] dark:text-slate-100">
 
@@ -488,5 +494,10 @@ if (empty($schemaJsonLd) && !empty($schemas) && is_array($schemas)) {
             });
         });
     </script>
+
+    <!-- Smart Sales Assistant AI Chatbot Widget (Gemini Powered) -->
+    <?php if (file_exists(ROOT_PATH . '/views/front/partials/chat-widget.php')): ?>
+        <?php require ROOT_PATH . '/views/front/partials/chat-widget.php'; ?>
+    <?php endif; ?>
 </body>
 </html>
