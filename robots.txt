@@ -3,4 +3,30 @@ Allow: /
 Disallow: /admin/
 Disallow: /lead/
 
+# AI Crawlers & Generative Engine Optimization (llms.txt)
+User-agent: GPTBot
+Allow: /
+Allow: /llms.txt
+Allow: /ai-context.md
+
+User-agent: ClaudeBot
+Allow: /
+Allow: /llms.txt
+Allow: /ai-context.md
+
+User-agent: PerplexityBot
+Allow: /
+Allow: /llms.txt
+Allow: /ai-context.md
+
+User-agent: Google-Extended
+Allow: /
+Allow: /llms.txt
+Allow: /ai-context.md
+
+User-agent: CCBot
+Allow: /
+Allow: /llms.txt
+Allow: /ai-context.md
+
 Sitemap: https://maaadmr.ir/sitemap.xml
