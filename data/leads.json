@@ -58,5 +58,28 @@
         "action_title": "💬 گفتگوی جدید کاربر با دستیار هوشمند AI",
         "has_ai_report": false,
         "logged_at": "2026-10-15 12:23:38"
+    },
+    {
+        "id": "lead_6ad0954b4c0ae2.95468959",
+        "source": "notification_dispatcher",
+        "ip": "155.254.35.237",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+        "created_at": "2026-10-15 12:26:43",
+        "full_name": "کاربر چت آنلاین",
+        "phone": "هنوز ثبت نشده (در حال چت)",
+        "website_url": null,
+        "message": "💬 پیام ۱ کاربر:\nسلام  ارادت   خوبی من   در کمبود زنگ خورم مشکل دارم و تلفونمون زنگ ننمیخوره    گفتم اگر میشه    ی مشاوره با هم داشته باشیم",
+        "service_requested": "دستیار فروش هوشمند (پیام ۱ از ۶)",
+        "source_cta": "ai_sales_chat",
+        "current_page": "/",
+        "user_journey": "/",
+        "user_journey_raw": [
+            "/"
+        ],
+        "utm_data": [],
+        "ip_address": "155.254.35.237",
+        "action_title": "💬 گفتگوی جدید کاربر با دستیار هوشمند AI",
+        "has_ai_report": false,
+        "logged_at": "2026-10-15 12:26:43"
     }
 ]
