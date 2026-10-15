@@ -1,0 +1,23 @@
+[
+    {
+        "id": "lead_6ad091aa0044c8.61790196",
+        "source": "notification_dispatcher",
+        "ip": "155.254.35.237",
+        "user_agent": "Python-urllib/3.14",
+        "created_at": "2026-10-15 12:11:14",
+        "full_name": "کاربر چت آنلاین",
+        "phone": "هنوز ثبت نشده (در حال چت)",
+        "website_url": "https://digi-sample.ir",
+        "message": "💬 پیام ۱ کاربر:\nسلام، من مدیر سایت digi-sample.ir هستم و برای افزایش رتبه و سئو نیاز به راهنمایی دارم",
+        "service_requested": "دستیار فروش هوشمند (پیام ۱ از ۶)",
+        "source_cta": "ai_sales_chat",
+        "current_page": "/",
+        "user_journey": "/",
+        "user_journey_raw": [],
+        "utm_data": [],
+        "ip_address": "155.254.35.237",
+        "action_title": "💬 گفتگوی جدید کاربر با دستیار هوشمند AI",
+        "has_ai_report": false,
+        "logged_at": "2026-10-15 12:11:14"
+    }
+]
