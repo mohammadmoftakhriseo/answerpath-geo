@@ -11,6 +11,14 @@
         <p class="text-gray-600 dark:text-slate-300 leading-relaxed text-sm sm:text-base">
             آموزش‌های عمیق و تجربیات عملی در زمینه سئو تکنیکال، معماری اسکیماهای JSON-LD، سئو محلی و بهینه‌سازی برای هوش مصنوعی (GEO/AEO).
         </p>
+
+        <!-- دکمه منابع منتخب گوگل (Google Preferred Source) -->
+        <?php 
+        $brandName = 'محمد مفتخری';
+        $customClass = 'pt-2';
+        $btnClass = 'w-full sm:w-auto';
+        include VIEWS_PATH . '/front/partials/google-preferred-source.php'; 
+        ?>
     </div>
 
     <!-- Articles Grid -->
