@@ -47,6 +47,14 @@ $categoryInfo = $catMap[$article['schema_type'] ?? ''] ?? ['name' => 'سئوی �
             <?= e($article['title']) ?>
         </h1>
 
+        <!-- دکمه منابع منتخب گوگل (Google Preferred Source) -->
+        <?php 
+        $brandName = 'محمد مفتخری';
+        $customClass = 'my-4 justify-start';
+        $btnClass = 'w-full sm:w-auto';
+        include VIEWS_PATH . '/front/partials/google-preferred-source.php'; 
+        ?>
+
         <!-- Cafe Danesh Style: خلاصه سریع (Quick Takeaways / Summary) -->
         <?php
         $summaryText = !empty($article['direct_answer']) ? $article['direct_answer'] : ($article['summary'] ?? '');
