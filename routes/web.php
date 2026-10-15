@@ -7,6 +7,8 @@ use App\Controllers\ArticleController as FrontArticleController;
 use App\Controllers\LeadController as FrontLeadController;
 use App\Controllers\SitemapController;
 use App\Controllers\AiBriefController;
+use App\Controllers\AiContextController;
+use App\Controllers\ChatController;
 use App\Controllers\ServiceController;
 use App\Controllers\PageController;
 use App\Controllers\TelegramBotController;
@@ -101,9 +103,16 @@ $router->get('/article/{slug}', [FrontArticleController::class, 'show']);
 // ثبت فرم مشاوره و لید (CRO)
 $router->post('/lead/submit', [FrontLeadController::class, 'submit'], ['csrf', 'rate_limit:10,3600']);
 
-// سئو تکنیکال: نقشه سایت داینامیک و Robots
+// سئو تکنیکال: نقشه سایت داینامیک، Robots و کانتکست هوش مصنوعی (llms.txt)
 $router->get('/sitemap.xml', [SitemapController::class, 'sitemap']);
 $router->get('/robots.txt', [SitemapController::class, 'robots']);
+$router->get('/llms.txt', [AiContextController::class, 'llmsTxt']);
+$router->get('/ai-context.md', [AiContextController::class, 'llmsTxt']);
+
+// دستیار فروش هوشمند (Smart Sales AI Chatbot with Server Rate-Limiting)
+$router->get('/api/chat', [ChatController::class, 'showIndex']);
+$router->post('/api/chat', [ChatController::class, 'chat'], ['rate_limit:8,60']);
+$router->post('/api/chat/reset', [ChatController::class, 'reset'], ['rate_limit:10,60']);
 
 // وب‌هوک و دستیار هوش مصنوعی تلگرام (Telegram Bot AI Assistant Webhook)
 $router->post('/api/telegram/webhook', [TelegramBotController::class, 'handle']);
