@@ -42,6 +42,13 @@
             رهایی از افت ترافیک با دیباگ دیتابیس، رفع تداخل افزونه‌ها و تنظیمات پیشرفته LiteSpeed و حل همیشگی خطاهای <a href="/articles" class="text-accent dark:text-blue-400 font-bold hover:underline">Core Web Vitals</a>.
         </p>
 
+        <!-- دکمه منابع منتخب گوگل (Google Preferred Source) -->
+        <?php 
+        $brandName = 'محمد مفتخری';
+        $customClass = 'mb-8';
+        include VIEWS_PATH . '/front/partials/google-preferred-source.php'; 
+        ?>
+
         <!-- جایگاه دستیار هوشمند (Lead Gen) -->
         <div class="max-w-2xl mx-auto">
             <div id="ai-diagnostic-tool" class="relative group p-6 sm:p-8 rounded-2xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 shadow-sm transition-all duration-300">
