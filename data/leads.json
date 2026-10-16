@@ -156,5 +156,28 @@
         "action_title": "💬 گفتگوی جدید کاربر با دستیار هوشمند AI",
         "has_ai_report": false,
         "logged_at": "2026-10-15 16:27:33"
+    },
+    {
+        "id": "lead_6ad1dad5b42da3.80375275",
+        "source": "notification_dispatcher",
+        "ip": "5.210.133.14",
+        "user_agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Mobile Safari/537.36",
+        "created_at": "2026-10-16 11:35:41",
+        "full_name": "کاربر چت آنلاین",
+        "phone": "هنوز ثبت نشده (در حال چت)",
+        "website_url": null,
+        "message": "💬 پیام ۱ کاربر:\nسرعت سایتم کنده و ارورهای تکنیکال دارم",
+        "service_requested": "دستیار فروش هوشمند (پیام ۱ از ۶)",
+        "source_cta": "ai_sales_chat",
+        "current_page": "/",
+        "user_journey": "/",
+        "user_journey_raw": [
+            "/"
+        ],
+        "utm_data": [],
+        "ip_address": "5.210.133.14",
+        "action_title": "💬 گفتگوی جدید کاربر با دستیار هوشمند AI",
+        "has_ai_report": false,
+        "logged_at": "2026-10-16 11:35:42"
     }
 ]
