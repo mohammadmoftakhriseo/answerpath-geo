@@ -142,26 +142,54 @@ class ChatController extends Controller
             $_SESSION['ai_chat_history'] = array_slice($_SESSION['ai_chat_history'], -10);
         }
 
-        // 8. Lead Capture & Instant Multi-Channel Alert (Admin Panel & Telegram Bot)
-        try {
-            $this->recordLeadAndNotify($request, $userMessage, $botReply, $count24h, $isLimitReached);
-        } catch (\Throwable $e) {
-            error_log('[ChatController] Lead & Notification error: ' . $e->getMessage());
-        }
-
-        // Cloudflare Edge Cache Prevention: Dynamic AI chat must never be cached
-        $response->header('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
-        $response->header('Pragma', 'no-cache');
-        $response->header('X-Accel-Buffering', 'no');
-
-        $response->json([
+        $responseData = [
             'success'       => true,
             'reply'         => $botReply,
             'limit_reached' => $isLimitReached,
             'messages_left' => $messagesLeft,
             'user_count'    => $count24h,
             'max_messages'  => self::MAX_MESSAGES_24H
-        ]);
+        ];
+
+        // Cloudflare Edge Cache Prevention: Dynamic AI chat must never be cached
+        $response->header('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
+        $response->header('Pragma', 'no-cache');
+        $response->header('X-Accel-Buffering', 'no');
+
+        // High-Performance Instant Delivery: Close connection to user immediately, run notifications in background
+        if (function_exists('fastcgi_finish_request')) {
+            http_response_code(200);
+            header('Content-Type: application/json; charset=utf-8');
+            header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+            header('Pragma: no-cache');
+            header('X-Accel-Buffering: no');
+            echo json_encode($responseData, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+            if (ob_get_level() > 0) {
+                ob_end_flush();
+            }
+            flush();
+            fastcgi_finish_request();
+            if (session_status() === PHP_SESSION_ACTIVE) {
+                session_write_close();
+            }
+
+            // Background async tasks: Lead recording, Telegram & Bale alerts (0 impact on user speed)
+            try {
+                $this->recordLeadAndNotify($request, $userMessage, $botReply, $count24h, $isLimitReached);
+            } catch (\Throwable $e) {
+                error_log('[ChatController] Lead & Notification error: ' . $e->getMessage());
+            }
+            exit;
+        }
+
+        // Standard execution fallback
+        try {
+            $this->recordLeadAndNotify($request, $userMessage, $botReply, $count24h, $isLimitReached);
+        } catch (\Throwable $e) {
+            error_log('[ChatController] Lead & Notification error: ' . $e->getMessage());
+        }
+
+        $response->json($responseData);
     }
 
     /**
@@ -352,7 +380,16 @@ class ChatController extends Controller
             }
         }
 
-        // Attempt 2: Fallback to xAI Grok if Gemini is restricted or unavailable
+        // Attempt 2: Fallback to Kimi AI (Moonshot) Engine
+        $kimiKey = $aiConfig['kimi_api_key'] ?? Env::get('KIMI_API_KEY');
+        if (!empty($kimiKey) && !str_starts_with($kimiKey, 'YOUR_')) {
+            $reply = $this->callKimiApi($userMessage, $history, $systemInstruction, $kimiKey, $aiConfig);
+            if (!empty($reply)) {
+                return $reply;
+            }
+        }
+
+        // Attempt 3: Fallback to xAI Grok if Gemini and Kimi are unavailable
         $xaiKey = $aiConfig['xai_api_key'] ?? Env::get('XAI_API_KEY');
         if (!empty($xaiKey) && !str_starts_with($xaiKey, 'YOUR_')) {
             $reply = $this->callXaiGrokApi($userMessage, $history, $systemInstruction, $xaiKey);
@@ -361,7 +398,7 @@ class ChatController extends Controller
             }
         }
 
-        // Attempt 3: High-Reliability Local Intent Matching Fallback
+        // Attempt 4: High-Reliability Local Intent Matching Fallback
         return $this->fallbackIntentMatch($userMessage, $messageNumber);
     }
 
@@ -403,6 +440,7 @@ class ChatController extends Controller
         $aiConfig = file_exists(ROOT_PATH . '/config/ai.php') ? (require ROOT_PATH . '/config/ai.php') : [];
         $cfAccountId = trim((string)($aiConfig['cf_ai_gateway_account_id'] ?? Env::get('CF_AI_GATEWAY_ACCOUNT_ID', '')));
         $cfSlug      = trim((string)($aiConfig['cf_ai_gateway_slug'] ?? Env::get('CF_AI_GATEWAY_SLUG', 'gemini-gateway')));
+        $cfToken     = trim((string)($aiConfig['cf_ai_gateway_token'] ?? Env::get('CF_AI_GATEWAY_TOKEN', '')));
         $isCfEnabled = !empty($aiConfig['cf_ai_gateway_enabled']) && !empty($cfAccountId) && $cfAccountId !== 'a1b2c3d4e5f6g7h8i9j0';
 
         $encodedPayload = json_encode($payload, JSON_UNESCAPED_UNICODE);
@@ -412,24 +450,34 @@ class ChatController extends Controller
             // Build candidate endpoints list: Try Cloudflare Gateway first if configured, then Direct Google
             $endpointsToTry = [];
             if ($isCfEnabled) {
+                $cfHeaders = [
+                    'Content-Type: application/json; charset=utf-8',
+                    'Accept: application/json',
+                    'x-goog-api-key: ' . $apiKey,
+                    'cf-cache-ttl: 86400', // Cloudflare AI Gateway edge response caching (24h)
+                    'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+                ];
+                if (!empty($cfToken)) {
+                    $cfHeaders[] = 'Authorization: Bearer ' . $cfToken;
+                    $cfHeaders[] = 'cf-aig-authorization: Bearer ' . $cfToken;
+                }
+
                 $endpointsToTry[] = [
+                    'type'    => 'cloudflare',
                     'url'     => "https://gateway.ai.cloudflare.com/v1/{$cfAccountId}/{$cfSlug}/google-ai-studio/v1beta/models/{$model}:generateContent?key={$encodedKey}",
-                    'headers' => [
-                        'Content-Type: application/json; charset=utf-8',
-                        'Accept: application/json',
-                        'x-goog-api-key: ' . $apiKey,
-                        'cf-cache-ttl: 86400', // Cloudflare AI Gateway edge response caching (24h)
-                    ]
+                    'headers' => $cfHeaders
                 ];
             }
 
             // Always have direct Google AI Studio endpoint ready (as primary or automatic fallback)
             $endpointsToTry[] = [
+                'type'    => 'direct',
                 'url'     => "https://generativelanguage.googleapis.com/v1beta/models/{$model}:generateContent?key={$encodedKey}",
                 'headers' => [
                     'Content-Type: application/json; charset=utf-8',
                     'Accept: application/json',
-                    'x-goog-api-key: ' . $apiKey
+                    'x-goog-api-key: ' . $apiKey,
+                    'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
                 ]
             ];
 
@@ -440,8 +488,8 @@ class ChatController extends Controller
                     CURLOPT_POST           => true,
                     CURLOPT_POSTFIELDS     => $encodedPayload,
                     CURLOPT_HTTPHEADER     => $target['headers'],
-                    CURLOPT_TIMEOUT        => 6,
-                    CURLOPT_CONNECTTIMEOUT => 3,
+                    CURLOPT_TIMEOUT        => 4,
+                    CURLOPT_CONNECTTIMEOUT => 2,
                     CURLOPT_SSL_VERIFYPEER => false,
                 ]);
 
@@ -457,6 +505,9 @@ class ChatController extends Controller
                             return trim((string)$p['text']);
                         }
                     }
+                } elseif ($target['type'] === 'cloudflare') {
+                    // If Cloudflare AI Gateway was unreachable or unauthorized, disable for next model
+                    $isCfEnabled = false;
                 }
             }
         }
@@ -500,6 +551,63 @@ class ChatController extends Controller
             ],
             CURLOPT_TIMEOUT        => 5,
             CURLOPT_CONNECTTIMEOUT => 3,
+            CURLOPT_SSL_VERIFYPEER => false,
+        ]);
+
+        $responseBody = curl_exec($ch);
+        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+
+        if ($httpCode === 200 && $responseBody) {
+            $decoded = json_decode((string)$responseBody, true);
+            if (isset($decoded['choices'][0]['message']['content'])) {
+                return trim((string)$decoded['choices'][0]['message']['content']);
+            }
+        }
+
+        return null;
+    }
+
+    /**
+     * Fallback: Call Kimi AI (Moonshot) API
+     */
+    private function callKimiApi(string $userMessage, array $history, string $systemInstruction, string $apiKey, array $aiConfig = []): ?string
+    {
+        $endpoint = $aiConfig['kimi_endpoint'] ?? 'https://api.moonshot.ai/v1/chat/completions';
+        $model = $aiConfig['kimi_model'] ?? 'kimi-k2.6';
+
+        $messages = [
+            ['role' => 'system', 'content' => $systemInstruction]
+        ];
+
+        foreach ($history as $h) {
+            $role = ($h['role'] === 'user') ? 'user' : 'assistant';
+            $messages[] = [
+                'role'    => $role,
+                'content' => (string)($h['parts'][0]['text'] ?? '')
+            ];
+        }
+        $messages[] = ['role' => 'user', 'content' => $userMessage];
+
+        $payload = [
+            'model'       => $model,
+            'messages'    => $messages,
+            'temperature' => 0.6,
+            'max_tokens'  => 800
+        ];
+
+        $ch = curl_init($endpoint);
+        curl_setopt_array($ch, [
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_POST           => true,
+            CURLOPT_POSTFIELDS     => json_encode($payload, JSON_UNESCAPED_UNICODE),
+            CURLOPT_HTTPHEADER     => [
+                'Content-Type: application/json; charset=utf-8',
+                'Authorization: Bearer ' . $apiKey,
+                'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+            ],
+            CURLOPT_TIMEOUT        => 4,
+            CURLOPT_CONNECTTIMEOUT => 2,
             CURLOPT_SSL_VERIFYPEER => false,
         ]);
 
