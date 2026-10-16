@@ -415,7 +415,7 @@ if (empty($schemaJsonLd) && !empty($schemas) && is_array($schemas)) {
                     </ul>
                 </div>
 
-                <!-- ستون ۴: شروع همکاری (2 cols) -->
+                <!-- ستون ۴: شروع همکاری و نماد اعتماد (2 cols) -->
                 <div class="lg:col-span-2 space-y-3">
                     <h4 class="text-white font-bold text-sm">شروع همکاری</h4>
                     <p class="text-xs text-slate-400 leading-relaxed font-normal">
@@ -425,6 +425,16 @@ if (empty($schemaJsonLd) && !empty($schemas) && is_array($schemas)) {
                         <span>رزرو نوبت مشاوره</span>
                         <i class="fas fa-arrow-left text-[10px]"></i>
                     </a>
+
+                    <!-- نماد اعتماد الکترونیکی (اینماد) با بهینه‌سازی سرعت و بدون افت پرفورمنس -->
+                    <div class="pt-3">
+                        <span class="block text-[11px] font-bold text-slate-400 mb-2">نماد و مجوز رسمی:</span>
+                        <div class="inline-flex items-center justify-center p-2.5 bg-white rounded-2xl shadow-sm border border-slate-700/50 hover:shadow-lg transition-transform hover:scale-105 duration-200">
+                            <a referrerpolicy='origin' target='_blank' href='https://trustseal.enamad.ir/?id=8199591&Code=FnEoaO7tVZUwjZJOrqnk3zHJz5SCKPJe' title="نماد اعتماد الکترونیکی اینماد محمد مفتخری" aria-label="نماد اعتماد الکترونیکی اینماد">
+                                <img referrerpolicy='origin' src='https://trustseal.enamad.ir/logo.aspx?id=8199591&Code=FnEoaO7tVZUwjZJOrqnk3zHJz5SCKPJe' alt='نماد اعتماد الکترونیکی اینماد' style='cursor:pointer' code='FnEoaO7tVZUwjZJOrqnk3zHJz5SCKPJe' width="75" height="75" class="w-16 h-16 sm:w-18 sm:h-18 object-contain" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='/assets/images/enamad-logo.png';">
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
             </div>
