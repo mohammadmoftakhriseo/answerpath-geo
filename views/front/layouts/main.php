@@ -49,37 +49,19 @@ if (empty($schemaJsonLd) && !empty($schemas) && is_array($schemas)) {
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png?v=3">
     <link rel="shortcut icon" href="/favicon.ico?v=3">
 
-    <!-- Vazirmatn Font (Primary Local Self-Hosted + Multi-CDN Fallbacks) -->
-    <link rel="stylesheet" href="/assets/fonts/vazirmatn.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.0.0/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
-    <link href="https://unpkg.com/vazirmatn@33.0.3/misc/Farsi-Digits/Vazirmatn-FD-font-face.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Vazirmatn', 'Vazirmatn FD', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
-                        vazir: ['Vazirmatn', 'Vazirmatn FD', 'sans-serif'],
-                    },
-                    colors: {
-                        background: '#F8FAFC', /* سفید استخوانی / اسلیت بسیار تمیز */
-                        textMain: '#0F172A', /* مشکی عمیق و خوانا */
-                        accent: '#1E3A8A', /* سرمه‌ای سلطنتی رسمی برند */
-                        accentHover: '#172554',
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- Font Preload for Zero CLS & Instant Rendering -->
+    <link rel="preload" href="/assets/fonts/Vazirmatn-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/Vazirmatn-700.woff2" as="font" type="font/woff2" crossorigin>
     
+
+    <!-- Pre-Compiled Production CSS (Replaces runtime cdn.tailwindcss.com) -->
+    <!-- Fast Preloaded & Cached Production CSS -->
+    <link rel="preload" href="/assets/css/app.min.css?v=2.2" as="style">
+    <link rel="stylesheet" href="/assets/css/app.min.css?v=2.2">
+
+    <!-- Asynchronous Non-Blocking FontAwesome (Does not block FCP) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+
     <script>
         // Automatic standard device theme detection (follows user OS / browser setting)
         function applySystemTheme() {
@@ -163,7 +145,6 @@ if (empty($schemaJsonLd) && !empty($schemas) && is_array($schemas)) {
             background-size: 24px 24px;
             opacity: 0.06;
         }
-        }
         
         /* Smooth micro-interactions */
         .interactive-scale {
@@ -182,7 +163,7 @@ if (empty($schemaJsonLd) && !empty($schemas) && is_array($schemas)) {
     <?php endif; ?>
 
     <!-- Google Preferred Sources (Subscribe with Google SDK) -->
-    <script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
+    
 </head>
 <body class="antialiased selection:bg-accent selection:text-white flex flex-col min-h-screen dark:bg-[#0B1120] dark:text-slate-100">
 
@@ -194,7 +175,7 @@ if (empty($schemaJsonLd) && !empty($schemas) && is_array($schemas)) {
                 <!-- Logo & Brand -->
                 <div class="flex-shrink-0 flex items-center gap-4">
                     <a href="/" class="flex items-center gap-3 group">
-                        <img src="/assets/images/logo.webp?v=<?= @filemtime(__DIR__ . '/../../../../assets/images/logo.webp') ?: time() ?>" alt="لوگو محمد مفتخری" class="w-11 h-11 sm:w-12 sm:h-12 object-contain rounded-2xl shadow-md group-hover:scale-105 transition-transform duration-300">
+                        <img src="/assets/images/logo.webp?v=<?= @filemtime(__DIR__ . '/../../../../assets/images/logo.webp') ?: time() ?>" alt="لوگو محمد مفتخری" width="48" height="48" class="w-11 h-11 sm:w-12 sm:h-12 object-contain rounded-2xl shadow-md group-hover:scale-105 transition-transform duration-300">
                         <div class="flex flex-col">
                             <span class="text-base sm:text-lg font-black text-slate-900 dark:text-white tracking-tight">محمد مفتخری</span>
                             <span class="text-[11px] font-bold text-accent dark:text-blue-400">استراتژیست سئو و اتوماسیون</span>
@@ -479,7 +460,7 @@ if (empty($schemaJsonLd) && !empty($schemas) && is_array($schemas)) {
                 navbar.style.background = isDark ? 'rgba(11, 17, 32, 0.9)' : 'rgba(229, 231, 235, 0.85)';
             }
         }
-        window.addEventListener('scroll', updateNavbarStyle);
+        window.addEventListener('scroll', updateNavbarStyle, { passive: true });
         if (window.matchMedia) {
             window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
                 setTimeout(updateNavbarStyle, 50);
@@ -509,5 +490,7 @@ if (empty($schemaJsonLd) && !empty($schemas) && is_array($schemas)) {
     <?php if (file_exists(ROOT_PATH . '/views/front/partials/chat-widget.php')): ?>
         <?php require ROOT_PATH . '/views/front/partials/chat-widget.php'; ?>
     <?php endif; ?>
+    <!-- Google Preferred Sources (Deferred for PageSpeed) -->
+    <script defer src="https://news.google.com/swg/js/v1/publisher.js"></script>
 </body>
 </html>
