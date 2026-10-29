@@ -6,7 +6,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                 
                 <!-- Text Content -->
-                <div class="lg:col-span-7 order-2 lg:order-1 space-y-4 sm:space-y-6">
+                <div class="lg:col-span-7 order-1 lg:order-1 space-y-4 sm:space-y-6">
                     
                     <div class="flex items-center gap-3 flex-wrap">
                         <div class="inline-flex items-center px-4 py-2 rounded-full bg-white dark:bg-slate-800 text-textMain dark:text-slate-200 text-sm font-bold shadow-sm border border-gray-200 dark:border-slate-700">
@@ -73,15 +73,14 @@
                 </div>
 
                 <!-- Profile Image / Graphic -->
-                <div class="lg:col-span-5 order-1 lg:order-2 flex justify-center lg:justify-end relative">
+                <div class="lg:col-span-5 order-2 lg:order-2 flex justify-center lg:justify-end relative">
                     <!-- Decorative background for image -->
                     <div class="absolute inset-0 bg-white rounded-[2.5rem] transform rotate-3 scale-105 shadow-xl"></div>
                     <div class="absolute inset-0 border-2 border-accent rounded-[2.5rem] transform -rotate-2 scale-105 z-0 opacity-40"></div>
                     
                     <!-- Profile Card with Real Photo -->
                     <div class="relative z-10 w-64 h-72 sm:w-80 sm:h-96 lg:w-96 lg:h-[420px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800 bg-slate-900 group">
-                        <img src="/assets/images/mohammadmoftakhari.jpg" alt="محمد مفتخری (Mohammad Moftakhari) - کارشناس سئو و متخصص هوش مصنوعی" 
-                             class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                        <img src="/assets/images/mohammadmoftakhari.webp" alt="محمد مفتخری (Mohammad Moftakhari) - کارشناس سئو و متخصص هوش مصنوعی" width="640" height="640" loading="lazy" decoding="async" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/30 to-transparent flex flex-col justify-end p-5 sm:p-7 text-white">
                             <h3 class="text-2xl sm:text-3xl font-black text-white drop-shadow-md">محمد مفتخری</h3>
                             <p class="text-xs text-blue-300 font-bold mt-0.5 font-mono" dir="ltr">Mohammad Moftakhari (maaadmr)</p>
