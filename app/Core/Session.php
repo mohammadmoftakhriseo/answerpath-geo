@@ -41,6 +41,7 @@ class Session
                 'samesite' => 'Lax'
             ]);
 
+            session_cache_limiter('');
             @session_start();
         }
 
