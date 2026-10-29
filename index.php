@@ -57,6 +57,14 @@ ini_set('log_errors', '1');
 try {
     Session::start();
 
+    // Enable Edge Micro-Caching & LiteSpeed Cache for Public Pages (TTFB < 50ms like inten.asia)
+    if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'GET' && !str_starts_with($_SERVER['REQUEST_URI'] ?? '', '/admin')) {
+        header('Cache-Control: public, max-age=300, s-maxage=3600, stale-while-revalidate=86400');
+        header('X-LiteSpeed-Cache-Control: public,max-age=3600');
+    }
+
+
+
     // اجرای رهگیری مسیر کاربر و پارامترهای تبلیغاتی (User Journey & UTM Tracker)
     if (file_exists(ROOT_PATH . '/tracker.php')) {
         require_once ROOT_PATH . '/tracker.php';
