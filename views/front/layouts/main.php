@@ -49,18 +49,38 @@ if (empty($schemaJsonLd) && !empty($schemas) && is_array($schemas)) {
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png?v=3">
     <link rel="shortcut icon" href="/favicon.ico?v=3">
 
-    <!-- Font Preload for Zero CLS & Instant Rendering -->
+    <!-- Font Preload & Full Vazirmatn Typography (All weights & Unicode ranges) -->
     <link rel="preload" href="/assets/fonts/Vazirmatn-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/Vazirmatn-700.woff2" as="font" type="font/woff2" crossorigin>
-    
-
+    <link rel="stylesheet" href="/assets/fonts/vazirmatn.css">
     <!-- Pre-Compiled Production CSS (Replaces runtime cdn.tailwindcss.com) -->
     <!-- Fast Preloaded & Cached Production CSS -->
     <link rel="preload" href="/assets/css/app.min.css?v=2.2" as="style">
     <link rel="stylesheet" href="/assets/css/app.min.css?v=2.2">
 
-    <!-- Asynchronous Non-Blocking FontAwesome (Does not block FCP) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <!-- FontAwesome: Load ONLY after first user interaction (zero render blocking) -->
+    <script>
+    (function(){
+        var faLoaded = false;
+        function loadFA() {
+            if (faLoaded) return;
+            faLoaded = true;
+            var l = document.createElement('link');
+            l.rel = 'stylesheet';
+            l.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
+            document.head.appendChild(l);
+        }
+        // Load on first interaction OR after 3 seconds idle
+        ['click','scroll','touchstart','keydown','mousemove'].forEach(function(e){
+            document.addEventListener(e, loadFA, {once:true, passive:true});
+        });
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(loadFA, {timeout: 3000});
+        } else {
+            setTimeout(loadFA, 3000);
+        }
+    })();
+    </script>
 
     <script>
         // Automatic standard device theme detection (follows user OS / browser setting)
@@ -78,8 +98,8 @@ if (empty($schemaJsonLd) && !empty($schemas) && is_array($schemas)) {
     </script>
     
     <style>
-        body, html, input, button, select, textarea, optgroup, option {
-            font-family: 'Vazirmatn', 'Vazirmatn FD', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        body, html, input, button, select, textarea, optgroup, option, p, span, h1, h2, h3, h4, h5, h6, a, div, li, ul, ol {
+            font-family: 'Vazirmatn', 'Vazirmatn FD', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
         }
 
         body, html {
@@ -89,7 +109,7 @@ if (empty($schemaJsonLd) && !empty($schemas) && is_array($schemas)) {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             text-rendering: optimizeLegibility;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            /* transition removed: causes forced reflow during initial paint */
         }
 
         .dark body, html.dark body {
@@ -175,7 +195,7 @@ if (empty($schemaJsonLd) && !empty($schemas) && is_array($schemas)) {
                 <!-- Logo & Brand -->
                 <div class="flex-shrink-0 flex items-center gap-4">
                     <a href="/" class="flex items-center gap-3 group">
-                        <img src="/assets/images/logo.webp?v=<?= @filemtime(__DIR__ . '/../../../../assets/images/logo.webp') ?: time() ?>" alt="لوگو محمد مفتخری" width="48" height="48" class="w-11 h-11 sm:w-12 sm:h-12 object-contain rounded-2xl shadow-md group-hover:scale-105 transition-transform duration-300">
+                        <img src="/assets/images/logo.webp?v=3" alt="لوگو محمد مفتخری" width="48" height="48" loading="lazy" decoding="async" class="w-11 h-11 sm:w-12 sm:h-12 object-contain rounded-2xl shadow-md group-hover:scale-105 transition-transform duration-300">
                         <div class="flex flex-col">
                             <span class="text-base sm:text-lg font-black text-slate-900 dark:text-white tracking-tight">محمد مفتخری</span>
                             <span class="text-[11px] font-bold text-accent dark:text-blue-400">استراتژیست سئو و اتوماسیون</span>
@@ -337,7 +357,7 @@ if (empty($schemaJsonLd) && !empty($schemas) && is_array($schemas)) {
                 <!-- ستون ۱: معرفی و شبکه‌های اجتماعی (5 cols) -->
                 <div class="lg:col-span-5 space-y-4">
                     <div class="flex items-center gap-3">
-                        <img src="/assets/images/logo.webp?v=<?= @filemtime(__DIR__ . '/../../../../assets/images/logo.webp') ?: time() ?>" alt="لوگو محمد مفتخری" class="w-11 h-11 object-contain rounded-xl shadow-md">
+                        <img src="/assets/images/logo.webp?v=3" alt="لوگو محمد مفتخری" class="w-11 h-11 object-contain rounded-xl shadow-md">
                         <div>
                             <span class="text-lg font-black text-white block">محمد مفتخری (Mohammad Moftakhari)</span>
                             <span class="text-xs text-blue-400 font-bold">کارشناس و استراتژیست سئو | ۶ سال سابقه</span>
@@ -460,13 +480,16 @@ if (empty($schemaJsonLd) && !empty($schemas) && is_array($schemas)) {
                 navbar.style.background = isDark ? 'rgba(11, 17, 32, 0.9)' : 'rgba(229, 231, 235, 0.85)';
             }
         }
-        window.addEventListener('scroll', updateNavbarStyle, { passive: true });
+        window.addEventListener('scroll', function() {
+            requestAnimationFrame(updateNavbarStyle);
+        }, { passive: true });
         if (window.matchMedia) {
             window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
                 setTimeout(updateNavbarStyle, 50);
             });
         }
-        updateNavbarStyle();
+        // Defer initial navbar style to avoid forced reflow at paint time
+        requestAnimationFrame(function() { updateNavbarStyle(); });
 
         // Smooth Scrolling for Hash Anchors
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
