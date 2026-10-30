@@ -503,111 +503,115 @@
 
                 <!-- Right: High-Impact Metric Highlights & Tools (5 Cols) -->
                 <div class="lg:col-span-5 space-y-6">
-                    <div class="p-6 sm:p-8 rounded-3xl bg-slate-900 text-white border border-slate-800 shadow-2xl space-y-6">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-black">
-                                <i class="fas fa-shield-alt"></i>
+                    <!-- EXACT COLOR MATCH: Deep Midnight Navy Solid Container -->
+                    <div class="p-6 sm:p-8 rounded-3xl text-white shadow-2xl space-y-6" style="background-color: #0a1120 !important; border: 1px solid #1a2744 !important;">
+                        
+                        <!-- Header -->
+                        <div class="flex items-center gap-3.5">
+                            <div class="w-11 h-11 rounded-2xl bg-blue-600 text-white flex items-center justify-center font-black shadow-md flex-shrink-0">
+                                <i class="fas fa-shield-alt text-lg"></i>
                             </div>
                             <div>
-                                <h3 class="font-black text-lg text-white">نتایج و تعهد کاری من</h3>
-                                <p class="text-xs text-gray-300">خلاصه فعالیت‌ها و دستاوردها در ۶ سال گذشته</p>
+                                <h3 class="font-black text-lg sm:text-xl text-white tracking-tight">نتایج و تعهد کاری من</h3>
+                                <p class="text-xs text-slate-400 font-normal mt-0.5">خلاصه فعالیت‌ها و دستاوردها در ۶ سال گذشته</p>
                             </div>
                         </div>
 
-                        <div class="grid grid-cols-2 gap-3">
-                            <div class="p-4 rounded-2xl bg-white/5 border border-white/10 text-center">
-                                <span class="block text-2xl sm:text-3xl font-black text-blue-400 font-mono">+۵۰</span>
-                                <span class="text-xs text-gray-300 font-bold mt-1 block">پروژه بهینه‌سازی موفق</span>
+                        <!-- 4 Metric Cards (Matching Reference Image Exactly) -->
+                        <div class="grid grid-cols-2 gap-3.5">
+                            <div class="p-4 rounded-2xl text-center" style="background-color: #131d36 !important; border: 1px solid #1e2d4a !important;">
+                                <span class="block text-2xl sm:text-3xl font-black text-[#38bdf8] font-mono tracking-tight">+۵۰</span>
+                                <span class="text-xs text-slate-300 font-bold mt-1.5 block">پروژه بهینه‌سازی موفق</span>
                             </div>
-                            <div class="p-4 rounded-2xl bg-white/5 border border-white/10 text-center">
-                                <span class="block text-2xl sm:text-3xl font-black text-emerald-400 font-mono">۹۵٪</span>
-                                <span class="text-xs text-gray-300 font-bold mt-1 block">رضایت کارفرمایان</span>
+                            <div class="p-4 rounded-2xl text-center" style="background-color: #131d36 !important; border: 1px solid #1e2d4a !important;">
+                                <span class="block text-2xl sm:text-3xl font-black text-[#34d399] font-mono tracking-tight">۹۵٪</span>
+                                <span class="text-xs text-slate-300 font-bold mt-1.5 block">رضایت کارفرمایان</span>
                             </div>
-                            <div class="p-4 rounded-2xl bg-white/5 border border-white/10 text-center">
-                                <span class="block text-2xl sm:text-3xl font-black text-cyan-400 font-mono">+۶ سال</span>
-                                <span class="text-xs text-gray-300 font-bold mt-1 block">سابقه کاری پیوسته</span>
+                            <div class="p-4 rounded-2xl text-center" style="background-color: #131d36 !important; border: 1px solid #1e2d4a !important;">
+                                <span class="block text-2xl sm:text-3xl font-black text-[#38bdf8] font-mono tracking-tight">+۶ سال</span>
+                                <span class="text-xs text-slate-300 font-bold mt-1.5 block">سابقه کاری پیوسته</span>
                             </div>
-                            <div class="p-4 rounded-2xl bg-white/5 border border-white/10 text-center">
-                                <span class="block text-2xl sm:text-3xl font-black text-indigo-400 font-mono">هدفمند</span>
-                                <span class="text-xs text-gray-300 font-bold mt-1 block">افزایش فروش و تماس</span>
+                            <div class="p-4 rounded-2xl text-center" style="background-color: #131d36 !important; border: 1px solid #1e2d4a !important;">
+                                <span class="block text-2xl sm:text-3xl font-black text-[#818cf8] font-mono tracking-tight">هدفمند</span>
+                                <span class="text-xs text-slate-300 font-bold mt-1.5 block">افزایش فروش و تماس</span>
                             </div>
                         </div>
 
-                        <!-- Daily Tools & Tech Stack Matrix -->
-                        <div class="pt-5 border-t border-white/10 space-y-3">
+                        <!-- Daily Tools & Modern AI Stack -->
+                        <div class="pt-5 space-y-3.5" style="border-top: 1px solid #1a2744 !important;">
                             <div class="flex items-center justify-between">
-                                <p class="text-xs font-black text-slate-200 flex items-center gap-2">
+                                <p class="text-xs font-bold text-slate-200 flex items-center gap-2">
                                     <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
                                     <i class="fas fa-toolbox text-blue-400"></i>
                                     <span>ابزارهای تحلیلی و اجرایی روزانه:</span>
                                 </p>
-                                <span class="text-[10px] font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded-full border border-cyan-500/20">تخصصی و به‌روز</span>
+                                <span class="text-[10px] font-bold text-cyan-400 bg-cyan-500/10 px-2.5 py-0.5 rounded-full border border-cyan-500/20">تخصصی و به‌روز</span>
                             </div>
 
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                                <!-- Tool 1: Google Search Console -->
-                                <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-blue-400/50 transition-all duration-200 group">
-                                    <div class="w-8 h-8 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center flex-shrink-0 text-sm group-hover:scale-110 transition-transform">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                                <!-- Tool 1: Google Antigravity -->
+                                <div class="flex items-center gap-3 p-3 rounded-2xl transition-all duration-200 hover:border-cyan-500/50" style="background-color: #131d36 !important; border: 1px solid #1e2d4a !important;">
+                                    <div class="w-9 h-9 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center flex-shrink-0 text-base">
+                                        <i class="fas fa-wand-magic-sparkles"></i>
+                                    </div>
+                                    <div class="min-w-0 flex-1">
+                                        <span class="block text-xs font-bold text-white">Google Antigravity</span>
+                                        <span class="block text-[11px] text-slate-400 font-normal mt-0.5">کدنویسی ایجنتیک و هوش مصنوعی</span>
+                                    </div>
+                                </div>
+
+                                <!-- Tool 2: Composio -->
+                                <div class="flex items-center gap-3 p-3 rounded-2xl transition-all duration-200 hover:border-amber-500/50" style="background-color: #131d36 !important; border: 1px solid #1e2d4a !important;">
+                                    <div class="w-9 h-9 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center flex-shrink-0 text-base">
+                                        <i class="fas fa-bolt"></i>
+                                    </div>
+                                    <div class="min-w-0 flex-1">
+                                        <span class="block text-xs font-bold text-white">Composio</span>
+                                        <span class="block text-[11px] text-slate-400 font-normal mt-0.5">اتصال ابزارهای ایجنت و اکشن</span>
+                                    </div>
+                                </div>
+
+                                <!-- Tool 3: MCP Ecosystem -->
+                                <div class="flex items-center gap-3 p-3 rounded-2xl transition-all duration-200 hover:border-purple-500/50" style="background-color: #131d36 !important; border: 1px solid #1e2d4a !important;">
+                                    <div class="w-9 h-9 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center flex-shrink-0 text-base">
+                                        <i class="fas fa-network-wired"></i>
+                                    </div>
+                                    <div class="min-w-0 flex-1">
+                                        <span class="block text-xs font-bold text-white">MCP Ecosystem</span>
+                                        <span class="block text-[11px] text-slate-400 font-normal mt-0.5">پروتکل ارتباط هوش مصنوعی با ابزارها</span>
+                                    </div>
+                                </div>
+
+                                <!-- Tool 4: Google Search Console -->
+                                <div class="flex items-center gap-3 p-3 rounded-2xl transition-all duration-200 hover:border-blue-500/50" style="background-color: #131d36 !important; border: 1px solid #1e2d4a !important;">
+                                    <div class="w-9 h-9 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center flex-shrink-0 text-base">
                                         <i class="fab fa-google"></i>
                                     </div>
-                                    <div class="min-w-0">
-                                        <span class="block text-xs font-bold text-white truncate">Search Console</span>
-                                        <span class="block text-[10px] text-slate-400 truncate">تحلیل کلمات، رتبه و ایندکس</span>
+                                    <div class="min-w-0 flex-1">
+                                        <span class="block text-xs font-bold text-white">Search Console</span>
+                                        <span class="block text-[11px] text-slate-400 font-normal mt-0.5">تحلیل کلمات، رتبه و ایندکس</span>
                                     </div>
                                 </div>
 
-                                <!-- Tool 2: Google Analytics 4 -->
-                                <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-amber-400/50 transition-all duration-200 group">
-                                    <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center flex-shrink-0 text-sm group-hover:scale-110 transition-transform">
-                                        <i class="fas fa-chart-pie"></i>
-                                    </div>
-                                    <div class="min-w-0">
-                                        <span class="block text-xs font-bold text-white truncate">Google Analytics 4</span>
-                                        <span class="block text-[10px] text-slate-400 truncate">ردیابی رفتار و تبدیل مشتری</span>
-                                    </div>
-                                </div>
-
-                                <!-- Tool 3: Ahrefs & KW Research -->
-                                <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-cyan-400/50 transition-all duration-200 group">
-                                    <div class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center flex-shrink-0 text-sm group-hover:scale-110 transition-transform">
-                                        <i class="fas fa-magnifying-glass-chart"></i>
-                                    </div>
-                                    <div class="min-w-0">
-                                        <span class="block text-xs font-bold text-white truncate">Ahrefs & KWs</span>
-                                        <span class="block text-[10px] text-slate-400 truncate">آنالیز رقبا، لینک و کلمات</span>
-                                    </div>
-                                </div>
-
-                                <!-- Tool 4: Screaming Frog -->
-                                <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-emerald-400/50 transition-all duration-200 group">
-                                    <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 text-sm group-hover:scale-110 transition-transform">
+                                <!-- Tool 5: Screaming Frog -->
+                                <div class="flex items-center gap-3 p-3 rounded-2xl transition-all duration-200 hover:border-emerald-500/50" style="background-color: #131d36 !important; border: 1px solid #1e2d4a !important;">
+                                    <div class="w-9 h-9 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 text-base">
                                         <i class="fas fa-spider"></i>
                                     </div>
-                                    <div class="min-w-0">
-                                        <span class="block text-xs font-bold text-white truncate">Screaming Frog</span>
-                                        <span class="block text-[10px] text-slate-400 truncate">سئو تکنیکال و خزش سایت</span>
+                                    <div class="min-w-0 flex-1">
+                                        <span class="block text-xs font-bold text-white">Screaming Frog</span>
+                                        <span class="block text-[11px] text-slate-400 font-normal mt-0.5">سئو تکنیکال و خزش سایت</span>
                                     </div>
                                 </div>
 
-                                <!-- Tool 5: WordPress & Elementor -->
-                                <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-sky-400/50 transition-all duration-200 group">
-                                    <div class="w-8 h-8 rounded-lg bg-sky-500/20 text-sky-400 flex items-center justify-center flex-shrink-0 text-sm group-hover:scale-110 transition-transform">
-                                        <i class="fab fa-wordpress"></i>
+                                <!-- Tool 6: Ahrefs & KWs -->
+                                <div class="flex items-center gap-3 p-3 rounded-2xl transition-all duration-200 hover:border-sky-500/50" style="background-color: #131d36 !important; border: 1px solid #1e2d4a !important;">
+                                    <div class="w-9 h-9 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center flex-shrink-0 text-base">
+                                        <i class="fas fa-magnifying-glass-chart"></i>
                                     </div>
-                                    <div class="min-w-0">
-                                        <span class="block text-xs font-bold text-white truncate">WordPress & Elementor</span>
-                                        <span class="block text-[10px] text-slate-400 truncate">طراحی قالب، صفحات و فرم</span>
-                                    </div>
-                                </div>
-
-                                <!-- Tool 6: Looker Studio & Reporting -->
-                                <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-purple-400/50 transition-all duration-200 group">
-                                    <div class="w-8 h-8 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center flex-shrink-0 text-sm group-hover:scale-110 transition-transform">
-                                        <i class="fas fa-chart-line"></i>
-                                    </div>
-                                    <div class="min-w-0">
-                                        <span class="block text-xs font-bold text-white truncate">Looker Studio</span>
-                                        <span class="block text-[10px] text-slate-400 truncate">داشبورد گزارش‌دهی رشد</span>
+                                    <div class="min-w-0 flex-1">
+                                        <span class="block text-xs font-bold text-white">Ahrefs & KWs</span>
+                                        <span class="block text-[11px] text-slate-400 font-normal mt-0.5">آنالیز رقبا، لینک و کلمات</span>
                                     </div>
                                 </div>
                             </div>
@@ -619,7 +623,7 @@
         </div>
     </section>
 
-    <!--     <!-- SECTION: Curated Knowledge & Blog Articles (مقالات و آموزش‌های سئو) -->
+    <!-- SECTION: Curated Knowledge & Blog Articles (مقالات و آموزش‌های سئو) -->
     <section id="blog" class="py-6 md:py-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 md:space-y-10">
             
