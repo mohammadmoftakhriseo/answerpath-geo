@@ -525,5 +525,27 @@
         "user_journey": "/start",
         "ip_address": "91.107.153.156",
         "logged_at": "2026-11-12 14:45:12"
+    },
+    {
+        "id": "lead_6af5a3c42b9999.22216141",
+        "source": "notification_dispatcher",
+        "ip": "91.107.153.156",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+        "created_at": "2026-11-12 15:02:20",
+        "full_name": "تست زنده از صفحه اصلی سایت",
+        "phone": "09302928001",
+        "website_url": "https://maaadmr.ir",
+        "message": "",
+        "service_requested": "مشاوره و بریف سئو",
+        "source_cta": "smart_brief_form",
+        "current_page": "/",
+        "user_journey": "/",
+        "user_journey_raw": [],
+        "utm_source_data": "Direct / Organic (مستقیم / ارگانیک)",
+        "utm_data": [],
+        "ip_address": "91.107.153.156",
+        "action_title": "مشاوره و بریف سئو",
+        "has_ai_report": false,
+        "logged_at": "2026-11-12 15:02:20"
     }
 ]
