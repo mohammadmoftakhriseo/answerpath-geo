@@ -433,5 +433,19 @@
         "action_title": "💬 گفتگوی جدید کاربر با دستیار هوشمند AI",
         "has_ai_report": false,
         "logged_at": "2026-10-22 21:58:18"
+    },
+    {
+        "id": "lead_6af59cbc84a016.34598618",
+        "source": "notification_dispatcher",
+        "ip": "91.107.153.156",
+        "user_agent": "Python-urllib/3.14",
+        "created_at": "2026-11-12 14:32:20",
+        "full_name": "کاربر تستی دیباگ",
+        "phone": "09121111111",
+        "website_url": "https://example.com",
+        "message": "این پیام تستی برای بررسی رسیدن پیام به بات تلگرام است.",
+        "action_title": "تست دیباگ فرم مشاوره",
+        "has_ai_report": false,
+        "logged_at": "2026-11-12 14:32:21"
     }
 ]
