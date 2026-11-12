@@ -178,3 +178,16 @@ function pushToGitHub(string $commit_message, string $file_path, string $content
     return $gitService->pushFile($file_path, $content, $commit_message, $branch);
 }
 
+/**
+ * پاکسازی کش هوشمند صفحات (Antigravity ISR/SSG Cache Invalidation)
+ *
+ * @param string|null $url مسیر صفحه مثلاً '/articles/my-slug' یا null برای پاکسازی کل صفحات
+ * @return int تعداد فایل‌های پاک شده
+ */
+function clear_page_cache(?string $url = null): int
+{
+    if (class_exists(\App\Core\CacheManager::class)) {
+        return \App\Core\CacheManager::getInstance()->clearCache($url);
+    }
+    return 0;
+}
