@@ -44,7 +44,7 @@ class LeadController extends Controller
         }
 
         // ۲. تله ضد اسپم ربات‌ها (Anti-spam Honeypot Check)
-        if (!empty($request->input('honeypot_check'))) {
+        if (!empty($request->input('honeypot_check')) || !empty($request->input('user_fax_security_check'))) {
             // ربات‌های اسپمر فیلد هانی‌پات را پر می‌کنند؛ با پاسخ موفق صوری فریب داده می‌شوند
             if ($isAjax) {
                 $response->json(['status' => 'success', 'message' => 'درخواست شما با موفقیت ثبت شد.']);
@@ -180,11 +180,31 @@ class LeadController extends Controller
         if ($isAjax) {
             $response->json([
                 'status'  => 'success', 
-                'message' => 'اطلاعات بریف با موفقیت ثبت شد. به‌زودی با شما تماس خواهم گرفت.'
+                'message' => 'درخواست مشاوره شما با موفقیت ثبت شد و پیام اطلاع‌رسانی به تلگرام مهندس محمد مفتخری ارسال گردید. به‌زودی با شما تماس خواهیم گرفت.'
             ]);
             return;
         }
 
-        $response->redirect('/?status=lead_received#contact');
+        $referer = (string)($request->header('REFERER') ?? $_SERVER['HTTP_REFERER'] ?? '/');
+        $redirectUrl = (str_contains($referer, '/start') || $sourceCta === 'start_page')
+            ? '/start?status=lead_received#contact'
+            : '/?status=lead_received#contact';
+
+        $response->redirect($redirectUrl);
+    }
+
+    /**
+     * Autonomous AI Agent Booking & Consultation Endpoint Handler
+     */
+    public function agentOrder(Request $request, Response $response): void
+    {
+        $apiFile = ROOT_PATH . '/api/agent-order.php';
+        if (file_exists($apiFile)) {
+            require $apiFile;
+            exit;
+        }
+
+        $response->setStatusCode(404);
+        $response->json(['error' => 'Agent endpoint not found']);
     }
 }
