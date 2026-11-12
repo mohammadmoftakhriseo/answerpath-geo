@@ -817,7 +817,7 @@ function setCommand(text) {
             </p>
         </div>
         <div class="shrink-0 relative z-10 flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
-            <a href="/start" class="w-full sm:w-auto px-7 py-4 rounded-2xl bg-white text-accent hover:bg-slate-100 font-black text-sm sm:text-base shadow-lg transition-all inline-flex items-center justify-center gap-2">
+            <a href="/start" data-agent-action="book-mcp-service" data-agent-endpoint="/api/agent-order.php" data-agent-service="mcp-automation" aria-label="رزرو آنلاین جلسه و خدمات اتوماسیون سازمانی MCP" class="w-full sm:w-auto px-7 py-4 rounded-2xl bg-white text-accent hover:bg-slate-100 font-black text-sm sm:text-base shadow-lg transition-all inline-flex items-center justify-center gap-2">
                 <i class="fas fa-calendar-check"></i>
                 <span>رزرو جلسه مشاوره اختصاصی</span>
             </a>
