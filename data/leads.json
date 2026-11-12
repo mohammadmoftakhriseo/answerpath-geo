@@ -469,5 +469,22 @@
         "action_title": "سئوی تکنیکال و سرعت",
         "has_ai_report": false,
         "logged_at": "2026-11-12 14:44:21"
+    },
+    {
+        "id": "lead_6af59f8fcf5708.47204868",
+        "source": "lead_controller",
+        "ip": "91.107.153.156",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+        "created_at": "2026-11-12 14:44:23",
+        "full_name": "تست فرم مشاوره زنده",
+        "phone": "09302928001",
+        "website_url": "https://maaadmr.ir",
+        "service_requested": "سئوی تکنیکال و سرعت",
+        "message": "این پیام تستی مستقیم از فرم است تا مطمئن شویم در تلگرام دریافت می‌شود.",
+        "source_cta": "start_page",
+        "current_page": "/",
+        "user_journey": "/",
+        "ip_address": "91.107.153.156",
+        "logged_at": "2026-11-12 14:44:24"
     }
 ]
