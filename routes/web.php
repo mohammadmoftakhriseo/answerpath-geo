@@ -100,8 +100,8 @@ $router->get('/project/{slug}', [FrontProjectController::class, 'show']);
 $router->get('/articles', [FrontArticleController::class, 'index']);
 $router->get('/article/{slug}', [FrontArticleController::class, 'show']);
 
-// ثبت فرم مشاوره و لید (CRO)
-$router->post('/lead/submit', [FrontLeadController::class, 'submit'], ['csrf', 'rate_limit:10,3600']);
+// ثبت فرم مشاوره و لید (CRO) - محافظت شده با محدودیت ارسال (Rate Limit) و هانی‌پات ضد اسپم
+$router->post('/lead/submit', [FrontLeadController::class, 'submit'], ['rate_limit:10,3600']);
 
 // سئو تکنیکال: نقشه سایت داینامیک، Robots و کانتکست هوش مصنوعی (llms.txt)
 $router->get('/sitemap.xml', [SitemapController::class, 'sitemap']);
@@ -109,10 +109,10 @@ $router->get('/robots.txt', [SitemapController::class, 'robots']);
 $router->get('/llms.txt', [AiContextController::class, 'llmsTxt']);
 $router->get('/ai-context.md', [AiContextController::class, 'llmsTxt']);
 
-// دستیار فروش هوشمند (Smart Sales AI Chatbot with Server Rate-Limiting)
-$router->get('/api/chat', [ChatController::class, 'showIndex']);
-$router->post('/api/chat', [ChatController::class, 'chat'], ['rate_limit:8,60']);
-$router->post('/api/chat/reset', [ChatController::class, 'reset'], ['rate_limit:10,60']);
+// دستیار فروش هوشمند (غیرفعال شده موقت طبق درخواست کاربر)
+// $router->get('/api/chat', [ChatController::class, 'showIndex']);
+// $router->post('/api/chat', [ChatController::class, 'chat'], ['rate_limit:8,60']);
+// $router->post('/api/chat/reset', [ChatController::class, 'reset'], ['rate_limit:10,60']);
 
 // وب‌هوک و دستیار هوش مصنوعی تلگرام (Telegram Bot AI Assistant Webhook)
 $router->post('/api/telegram/webhook', [TelegramBotController::class, 'handle']);
@@ -207,4 +207,5 @@ $router->get('/system-sync-article-media', [PageController::class, 'syncArticleM
 
 $router->get('/api/system/bind-reddit', [PageController::class, 'bindRedditDirect'], ['auth']);
 
-
+// Autonomous AI Agent Booking & Consultation Endpoint (M2M API)
+$router->post('/api/agent-order', [\App\Controllers\LeadController::class, 'agentOrder']);
