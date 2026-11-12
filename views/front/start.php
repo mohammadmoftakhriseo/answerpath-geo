@@ -60,9 +60,28 @@
                     </span>
                 </div>
 
-                <form action="/lead/submit" method="POST" class="space-y-5">
-                    <?= csrf_field() ?>
+                <?php if (isset($_GET['status']) && $_GET['status'] === 'lead_received'): ?>
+                    <div class="p-5 rounded-2xl bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 text-emerald-800 dark:text-emerald-200 flex items-center gap-3.5 mb-2 shadow-sm">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center shrink-0 text-lg shadow-md shadow-emerald-500/30">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-black">درخواست مشاوره شما با موفقیت ثبت شد!</h3>
+                            <p class="text-xs text-emerald-700 dark:text-emerald-300 mt-1">اطلاعات شما دریافت شد و نوتیفیکیشن لحظه‌ای به تلگرام مهندس محمد مفتخری ارسال گردید. به‌زودی با شماره شما تماس گرفته خواهد شد.</p>
+                        </div>
+                    </div>
+                <?php endif; ?>
+
+                <!-- پیام وضعیت تعاملی فرم (ایجکس) -->
+                <div id="startFormAlert" class="hidden p-5 rounded-2xl text-xs font-bold transition-all mb-2"></div>
+
+                <form id="startConsultForm" action="/lead/submit" method="POST" class="space-y-5" data-agent-form="service-booking" data-agent-endpoint="/api/agent-order.php" aria-label="فرم رزرو مشاوره و سفارش پروژه">
                     <input type="hidden" name="source" value="start_page" />
+
+                    <!-- فیلد مخفی تله ضداسپم (Honeypot Trap) -->
+                    <div style="display:none !important; position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;" aria-hidden="true">
+                        <input type="text" name="user_fax_security_check" tabindex="-1" autocomplete="off" value="" />
+                    </div>
 
                     <!-- انتخاب حوزه مدنظر (UX Service Pills) -->
                     <div>
@@ -71,42 +90,42 @@
                         </label>
                         <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
                             <label class="cursor-pointer">
-                                <input type="radio" name="service_type" value="technical_seo" class="peer sr-only" checked>
+                                <input type="radio" name="service_type" data-agent-field="service_slug" value="technical_seo" class="peer sr-only" checked>
                                 <div class="px-3 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950/70 text-xs font-bold text-slate-700 dark:text-slate-300 peer-checked:border-accent peer-checked:bg-blue-50/80 dark:peer-checked:bg-blue-950/50 peer-checked:text-accent dark:peer-checked:text-blue-400 text-center transition-all">
                                     <i class="fas fa-bolt ml-1"></i>سئوی تکنیکال و سرعت
                                 </div>
                             </label>
                             
                             <label class="cursor-pointer">
-                                <input type="radio" name="service_type" value="seo_strategy" class="peer sr-only">
+                                <input type="radio" name="service_type" data-agent-field="service_slug" value="seo_strategy" class="peer sr-only">
                                 <div class="px-3 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950/70 text-xs font-bold text-slate-700 dark:text-slate-300 peer-checked:border-accent peer-checked:bg-blue-50/80 dark:peer-checked:bg-blue-950/50 peer-checked:text-accent dark:peer-checked:text-blue-400 text-center transition-all">
                                     <i class="fas fa-compass ml-1"></i>استراتژی و مشاوره
                                 </div>
                             </label>
 
                             <label class="cursor-pointer">
-                                <input type="radio" name="service_type" value="ai_automation" class="peer sr-only">
+                                <input type="radio" name="service_type" data-agent-field="service_slug" value="ai_automation" class="peer sr-only">
                                 <div class="px-3 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950/70 text-xs font-bold text-slate-700 dark:text-slate-300 peer-checked:border-accent peer-checked:bg-blue-50/80 dark:peer-checked:bg-blue-950/50 peer-checked:text-accent dark:peer-checked:text-blue-400 text-center transition-all">
                                     <i class="fas fa-network-wired ml-1"></i>یکپارچه‌سازی و اتوماسیون MCP
                                 </div>
                             </label>
 
                             <label class="cursor-pointer">
-                                <input type="radio" name="service_type" value="landing_cro" class="peer sr-only">
+                                <input type="radio" name="service_type" data-agent-field="service_slug" value="landing_cro" class="peer sr-only">
                                 <div class="px-3 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950/70 text-xs font-bold text-slate-700 dark:text-slate-300 peer-checked:border-accent peer-checked:bg-blue-50/80 dark:peer-checked:bg-blue-950/50 peer-checked:text-accent dark:peer-checked:text-blue-400 text-center transition-all">
                                     <i class="fas fa-layer-group ml-1"></i>طراحی لندینگ و CRO
                                 </div>
                             </label>
 
                             <label class="cursor-pointer">
-                                <input type="radio" name="service_type" value="local_seo" class="peer sr-only">
+                                <input type="radio" name="service_type" data-agent-field="service_slug" value="local_seo" class="peer sr-only">
                                 <div class="px-3 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950/70 text-xs font-bold text-slate-700 dark:text-slate-300 peer-checked:border-accent peer-checked:bg-blue-50/80 dark:peer-checked:bg-blue-950/50 peer-checked:text-accent dark:peer-checked:text-blue-400 text-center transition-all">
                                     <i class="fas fa-map-location-dot ml-1"></i>سئوی محلی و نقشه‌ها
                                 </div>
                             </label>
 
                             <label class="cursor-pointer">
-                                <input type="radio" name="service_type" value="custom_dev" class="peer sr-only">
+                                <input type="radio" name="service_type" data-agent-field="service_slug" value="custom_dev" class="peer sr-only">
                                 <div class="px-3 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950/70 text-xs font-bold text-slate-700 dark:text-slate-300 peer-checked:border-accent peer-checked:bg-blue-50/80 dark:peer-checked:bg-blue-950/50 peer-checked:text-accent dark:peer-checked:text-blue-400 text-center transition-all">
                                     <i class="fas fa-code ml-1"></i>طراحی اختصاصی سایت
                                 </div>
@@ -119,7 +138,7 @@
                         <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-2">
                             نام و نام خانوادگی / عنوان کسب‌وکار <span class="text-rose-500">*</span>
                         </label>
-                        <input type="text" name="name" required placeholder="مثال: علی رضایی (مدیر فروشگاه...)" class="w-full px-4 py-3.5 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all font-medium" />
+                        <input type="text" name="name" id="agent_client_name" data-agent-field="client_name" autocomplete="name" aria-label="نام و نام خانوادگی مشتری" required placeholder="مثال: علی رضایی (مدیر فروشگاه...)" class="w-full px-4 py-3.5 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all font-medium" />
                     </div>
 
                     <!-- تماس و وب‌سایت -->
@@ -128,13 +147,13 @@
                             <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-2">
                                 شماره تماس مستقیم <span class="text-rose-500">*</span>
                             </label>
-                            <input type="tel" name="phone" required placeholder="۰۹۱۲..." class="w-full px-4 py-3.5 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all text-left dir-ltr font-medium" />
+                            <input type="tel" name="phone" id="agent_client_contact" data-agent-field="client_contact" autocomplete="tel" aria-label="شماره تماس یا ایمیل یا آیدی تلگرام" required placeholder="۰۹۱۲..." class="w-full px-4 py-3.5 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all text-left dir-ltr font-medium" />
                         </div>
                         <div>
                             <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-2">
                                 آدرس وب‌سایت (دامنه)
                             </label>
-                            <input type="url" name="website" placeholder="https://example.com" class="w-full px-4 py-3.5 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all text-left dir-ltr font-medium" />
+                            <input type="url" name="website" id="agent_client_website" data-agent-field="client_website" autocomplete="url" aria-label="آدرس وب‌سایت یا پروژه" placeholder="https://example.com" class="w-full px-4 py-3.5 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all text-left dir-ltr font-medium" />
                         </div>
                     </div>
 
@@ -143,12 +162,12 @@
                         <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-2">
                             توضیح مختصر درباره وضعیت فعلی یا چالش اصلی
                         </label>
-                        <textarea name="message" rows="4" placeholder="مثلاً: افت رتبه پس از آپدیت گوگل، کندی سرعت فروشگاه، نیاز به نقشه راه سئو، ساخت اتوماسیون محتوا یا توسعه لندینگ پرسرعت..." class="w-full px-4 py-3.5 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all resize-none font-medium leading-relaxed"></textarea>
+                        <textarea name="message" id="agent_project_notes" data-agent-field="project_notes" aria-label="توضیحات و نیازمندی‌های پروژه" rows="4" placeholder="مثلاً: افت رتبه پس از آپدیت گوگل، کندی سرعت فروشگاه، نیاز به نقشه راه سئو، ساخت اتوماسیون محتوا یا توسعه لندینگ پرسرعت..." class="w-full px-4 py-3.5 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all resize-none font-medium leading-relaxed"></textarea>
                     </div>
 
                     <!-- دکمه سابمیت با استایل برند -->
-                    <button type="submit" class="w-full py-4 rounded-xl bg-accent hover:bg-accentHover text-white font-black text-sm sm:text-base shadow-lg shadow-accent/20 active:scale-95 transition-all flex items-center justify-center gap-2.5">
-                        <span>ارسال و ثبت نهایی درخواست مشاوره</span>
+                    <button type="submit" id="startSubmitBtn" data-agent-action="submit-booking" aria-label="ثبت درخواست همکاری بدون نیاز به لاگین" class="w-full py-4 rounded-xl bg-accent hover:bg-accentHover text-white font-black text-sm sm:text-base shadow-lg shadow-accent/20 active:scale-95 transition-all flex items-center justify-center gap-2.5">
+                        <span id="startSubmitText">ارسال و ثبت نهایی درخواست مشاوره</span>
                         <i class="fas fa-paper-plane text-xs"></i>
                     </button>
                 </form>
@@ -255,5 +274,95 @@
 
     </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('startConsultForm');
+    if (!form) return;
+
+    const submitBtn = document.getElementById('startSubmitBtn');
+    const submitText = document.getElementById('startSubmitText');
+    const alertBox = document.getElementById('startFormAlert');
+
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        // Phone Validation
+        const phoneInput = form.querySelector('input[name="phone"]');
+        const phoneVal = phoneInput ? phoneInput.value.trim() : '';
+        if (!phoneVal) {
+            showAlert('لطفاً شماره تماس مستقیم خود را وارد فرمایید.', 'error');
+            if (phoneInput) phoneInput.focus();
+            return;
+        }
+
+        const originalText = submitText ? submitText.innerHTML : 'ارسال درخواست';
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+            if (submitText) submitText.innerHTML = '<i class="fas fa-spinner fa-spin ml-2"></i>در حال ثبت اطلاعات و ارسال به تلگرام...';
+        }
+
+        try {
+            const formData = new FormData(form);
+            const response = await fetch('/lead/submit', {
+                method: 'POST',
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'Accept': 'application/json'
+                },
+                body: formData
+            });
+
+            const result = await response.json().catch(() => null);
+
+            if (response.ok && result && result.status === 'success') {
+                showAlert(
+                    `<div class="flex items-start gap-3.5">
+                        <div class="w-9 h-9 rounded-xl bg-emerald-500 text-white flex items-center justify-center shrink-0 text-base shadow-sm">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div>
+                            <div class="text-sm font-black text-emerald-800 dark:text-emerald-200">درخواست مشاوره با موفقیت ثبت شد!</div>
+                            <div class="text-xs text-emerald-700 dark:text-emerald-300 mt-1 leading-relaxed">
+                                اطلاعات شما با موفقیت ثبت شد و اعلان لحظه‌ای به تلگرام مهندس محمد مفتخری ارسال گردید. طی ساعات کاری آینده با شما تماس خواهیم گرفت.
+                            </div>
+                        </div>
+                    </div>`,
+                    'success'
+                );
+                form.reset();
+                if (submitBtn) submitBtn.style.display = 'none';
+            } else {
+                const errMsg = (result && result.message) ? result.message : 'خطایی در ثبت اطلاعات رخ داد. لطفاً فیلدهای ضروری را بررسی کنید.';
+                showAlert(errMsg, 'error');
+            }
+        } catch (error) {
+            console.error('Submission error:', error);
+            showAlert('خطا در ارتباط با سرور. لطفاً اتصال اینترنت خود را بررسی کرده یا مستقیماً از طریق تلگرام پیام دهید.', 'error');
+        } finally {
+            if (submitBtn && submitBtn.style.display !== 'none') {
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+                if (submitText) submitText.innerHTML = originalText;
+            }
+        }
+    });
+
+    function showAlert(htmlContent, type) {
+        if (!alertBox) return;
+        alertBox.innerHTML = htmlContent;
+        alertBox.classList.remove('hidden', 'bg-emerald-50', 'text-emerald-800', 'border-emerald-200', 'bg-rose-50', 'text-rose-800', 'border-rose-200');
+        
+        if (type === 'success') {
+            alertBox.className = 'p-5 rounded-2xl bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 text-emerald-800 dark:text-emerald-200 shadow-sm mb-4 block';
+        } else {
+            alertBox.className = 'p-4 rounded-2xl bg-rose-50 dark:bg-rose-950/60 border border-rose-200 dark:border-rose-800 text-rose-800 dark:text-rose-200 text-xs font-bold mb-4 block';
+        }
+
+        alertBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+});
+</script>
 
 
