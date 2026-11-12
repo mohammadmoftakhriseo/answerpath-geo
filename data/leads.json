@@ -564,5 +564,29 @@
         "user_journey": "/",
         "ip_address": "91.107.153.156",
         "logged_at": "2026-11-12 15:02:23"
+    },
+    {
+        "id": "lead_6af5a4d17fc233.76312688",
+        "source": "notification_dispatcher",
+        "ip": "45.134.38.78",
+        "user_agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36",
+        "created_at": "2026-11-12 15:06:49",
+        "full_name": "moftakhari",
+        "phone": "33100057",
+        "website_url": "https://renotanzim.com/",
+        "message": "",
+        "service_requested": "مشاوره و بریف سئو",
+        "source_cta": "smart_brief_form",
+        "current_page": "/",
+        "user_journey": "/",
+        "user_journey_raw": [
+            "/"
+        ],
+        "utm_source_data": "Direct / Organic (مستقیم / ارگانیک)",
+        "utm_data": [],
+        "ip_address": "45.134.38.78",
+        "action_title": "مشاوره و بریف سئو",
+        "has_ai_report": false,
+        "logged_at": "2026-11-12 15:06:50"
     }
 ]
