@@ -447,5 +447,27 @@
         "action_title": "تست دیباگ فرم مشاوره",
         "has_ai_report": false,
         "logged_at": "2026-11-12 14:32:21"
+    },
+    {
+        "id": "lead_6af59f8d410756.80077179",
+        "source": "notification_dispatcher",
+        "ip": "91.107.153.156",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+        "created_at": "2026-11-12 14:44:21",
+        "full_name": "تست فرم مشاوره زنده",
+        "phone": "09302928001",
+        "website_url": "https://maaadmr.ir",
+        "message": "این پیام تستی مستقیم از فرم است تا مطمئن شویم در تلگرام دریافت می‌شود.",
+        "service_requested": "سئوی تکنیکال و سرعت",
+        "source_cta": "start_page",
+        "current_page": "/",
+        "user_journey": "/",
+        "user_journey_raw": [],
+        "utm_source_data": "Direct / Organic (مستقیم / ارگانیک)",
+        "utm_data": [],
+        "ip_address": "91.107.153.156",
+        "action_title": "سئوی تکنیکال و سرعت",
+        "has_ai_report": false,
+        "logged_at": "2026-11-12 14:44:21"
     }
 ]
