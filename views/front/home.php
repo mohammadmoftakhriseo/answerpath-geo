@@ -107,7 +107,7 @@
     </section>
 
     <!-- About Stats Section -->
-    <section id="about" class="py-6 md:py-8 bg-textMain text-white rounded-3xl my-4 sm:my-6 md:my-8">
+    <section id="about" class="py-6 md:py-8 bg-[#0F172A] bg-textMain text-white rounded-3xl my-4 sm:my-6 md:my-8" style="background-color: #0f172a !important;">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 divide-x divide-x-reverse divide-gray-700 text-center">
                 <div class="p-2 sm:p-4">
@@ -206,14 +206,14 @@
                 </div>
                 
                 <!-- Service 6: Big Project SEO Consulting -->
-                <div class="card p-8 rounded-3xl bg-slate-900 text-white border-none shadow-xl flex flex-col justify-between">
+                <div class="p-8 rounded-3xl text-white shadow-xl flex flex-col justify-between" style="background-color: #0f172a !important; border: 1px solid #1e293b !important;">
                     <div>
                         <div class="flex items-center justify-between mb-6">
                             <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center text-white text-2xl">
                                 <i class="fas fa-map-location-dot"></i>
                             </div>
                             <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-blue-500/20 text-cyan-300 border border-blue-500/30">
-                                <i class="fas fa-sparkles ml-1"></i>تحلیل هوشمند
+                                <i class="fas fa-wand-magic-sparkles ml-1"></i>تحلیل هوشمند
                             </span>
                         </div>
                         <h4 class="text-xl font-black mb-3 text-white">مشاوره و نقشه راه سئو</h4>
@@ -549,40 +549,18 @@
                             </div>
 
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                                <!-- Tool 1: Google Antigravity -->
-                                <div class="flex items-center gap-3 p-3 rounded-2xl transition-all duration-200 hover:border-cyan-500/50" style="background-color: #131d36 !important; border: 1px solid #1e2d4a !important;">
-                                    <div class="w-9 h-9 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center flex-shrink-0 text-base">
-                                        <i class="fas fa-wand-magic-sparkles"></i>
-                                    </div>
-                                    <div class="min-w-0 flex-1">
-                                        <span class="block text-xs font-bold text-white">Google Antigravity</span>
-                                        <span class="block text-[11px] text-slate-400 font-normal mt-0.5">کدنویسی ایجنتیک و هوش مصنوعی</span>
-                                    </div>
-                                </div>
-
-                                <!-- Tool 2: Composio -->
+                                <!-- Tool 1: Google Analytics 4 -->
                                 <div class="flex items-center gap-3 p-3 rounded-2xl transition-all duration-200 hover:border-amber-500/50" style="background-color: #131d36 !important; border: 1px solid #1e2d4a !important;">
                                     <div class="w-9 h-9 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center flex-shrink-0 text-base">
-                                        <i class="fas fa-bolt"></i>
+                                        <i class="fas fa-chart-pie"></i>
                                     </div>
                                     <div class="min-w-0 flex-1">
-                                        <span class="block text-xs font-bold text-white">Composio</span>
-                                        <span class="block text-[11px] text-slate-400 font-normal mt-0.5">اتصال ابزارهای ایجنت و اکشن</span>
+                                        <span class="block text-xs font-bold text-white">Google Analytics 4</span>
+                                        <span class="block text-[11px] text-slate-400 font-normal mt-0.5">ردیابی رفتار و تبدیل مشتری</span>
                                     </div>
                                 </div>
 
-                                <!-- Tool 3: MCP Ecosystem -->
-                                <div class="flex items-center gap-3 p-3 rounded-2xl transition-all duration-200 hover:border-purple-500/50" style="background-color: #131d36 !important; border: 1px solid #1e2d4a !important;">
-                                    <div class="w-9 h-9 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center flex-shrink-0 text-base">
-                                        <i class="fas fa-network-wired"></i>
-                                    </div>
-                                    <div class="min-w-0 flex-1">
-                                        <span class="block text-xs font-bold text-white">MCP Ecosystem</span>
-                                        <span class="block text-[11px] text-slate-400 font-normal mt-0.5">پروتکل ارتباط هوش مصنوعی با ابزارها</span>
-                                    </div>
-                                </div>
-
-                                <!-- Tool 4: Google Search Console -->
+                                <!-- Tool 2: Google Search Console -->
                                 <div class="flex items-center gap-3 p-3 rounded-2xl transition-all duration-200 hover:border-blue-500/50" style="background-color: #131d36 !important; border: 1px solid #1e2d4a !important;">
                                     <div class="w-9 h-9 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center flex-shrink-0 text-base">
                                         <i class="fab fa-google"></i>
@@ -593,7 +571,7 @@
                                     </div>
                                 </div>
 
-                                <!-- Tool 5: Screaming Frog -->
+                                <!-- Tool 3: Screaming Frog -->
                                 <div class="flex items-center gap-3 p-3 rounded-2xl transition-all duration-200 hover:border-emerald-500/50" style="background-color: #131d36 !important; border: 1px solid #1e2d4a !important;">
                                     <div class="w-9 h-9 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 text-base">
                                         <i class="fas fa-spider"></i>
@@ -604,7 +582,7 @@
                                     </div>
                                 </div>
 
-                                <!-- Tool 6: Ahrefs & KWs -->
+                                <!-- Tool 4: Ahrefs & KWs -->
                                 <div class="flex items-center gap-3 p-3 rounded-2xl transition-all duration-200 hover:border-sky-500/50" style="background-color: #131d36 !important; border: 1px solid #1e2d4a !important;">
                                     <div class="w-9 h-9 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center flex-shrink-0 text-base">
                                         <i class="fas fa-magnifying-glass-chart"></i>
@@ -612,6 +590,28 @@
                                     <div class="min-w-0 flex-1">
                                         <span class="block text-xs font-bold text-white">Ahrefs & KWs</span>
                                         <span class="block text-[11px] text-slate-400 font-normal mt-0.5">آنالیز رقبا، لینک و کلمات</span>
+                                    </div>
+                                </div>
+
+                                <!-- Tool 5: Looker Studio -->
+                                <div class="flex items-center gap-3 p-3 rounded-2xl transition-all duration-200 hover:border-purple-500/50" style="background-color: #131d36 !important; border: 1px solid #1e2d4a !important;">
+                                    <div class="w-9 h-9 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center flex-shrink-0 text-base">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <div class="min-w-0 flex-1">
+                                        <span class="block text-xs font-bold text-white">Looker Studio</span>
+                                        <span class="block text-[11px] text-slate-400 font-normal mt-0.5">داشبورد گزارش‌دهی رشد</span>
+                                    </div>
+                                </div>
+
+                                <!-- Tool 6: WordPress & Elementor -->
+                                <div class="flex items-center gap-3 p-3 rounded-2xl transition-all duration-200 hover:border-indigo-500/50" style="background-color: #131d36 !important; border: 1px solid #1e2d4a !important;">
+                                    <div class="w-9 h-9 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center flex-shrink-0 text-base">
+                                        <i class="fab fa-wordpress"></i>
+                                    </div>
+                                    <div class="min-w-0 flex-1">
+                                        <span class="block text-xs font-bold text-white">WordPress & Elementor</span>
+                                        <span class="block text-[11px] text-slate-400 font-normal mt-0.5">طراحی قالب، صفحات و فرم</span>
                                     </div>
                                 </div>
                             </div>
@@ -691,7 +691,7 @@
             <div class="text-center max-w-3xl mx-auto space-y-2 sm:space-y-3">
                 <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/60 text-accent dark:text-cyan-300 text-xs font-bold border border-blue-200 dark:border-blue-900/60 shadow-sm">
                     <span class="w-2 h-2 rounded-full bg-accent dark:bg-cyan-400 animate-ping"></span>
-                    <i class="fas fa-sparkles"></i>
+                    <i class="fas fa-wand-magic-sparkles"></i>
                     <span>ابزار هوشمند + استراتژی اختصاصی رشد</span>
                 </div>
                 <h2 class="text-2xl sm:text-4xl font-black text-textMain dark:text-white leading-tight">
@@ -812,12 +812,11 @@
             </div>
 
             <div class="bg-white dark:bg-slate-900 text-textMain dark:text-white rounded-3xl p-5 sm:p-8 shadow-2xl border border-gray-200 dark:border-slate-800">
-                <form id="smartBriefForm" class="space-y-4">
-                    <?= csrf_field() ?>
+                <form id="smartBriefForm" action="/lead/submit" method="POST" class="space-y-4">
                     <input type="hidden" name="source_cta" value="smart_brief_form">
                     
                     <!-- Anti-spam Honeypot -->
-                    <div style="display:none;">
+                    <div style="display:none !important; position:absolute; left:-9999px;">
                         <input type="text" name="honeypot_check" tabindex="-1" autocomplete="off">
                     </div>
 
@@ -827,7 +826,7 @@
                             نام و نام خانوادگی *
                         </label>
                         <input type="text" id="full_name" name="full_name" required placeholder="مثال: علی رضایی"
-                                class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-slate-700 dark:bg-slate-800 focus:border-accent dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-100 text-sm outline-none text-textMain dark:text-white transition">
+                                class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-slate-700 bg-white dark:bg-slate-800 focus:border-accent dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-100 text-sm outline-none text-slate-900 dark:text-white placeholder-slate-400 transition">
                     </div>
 
                     <!-- Phone Number -->
@@ -836,7 +835,7 @@
                             شماره تماس *
                         </label>
                         <input type="tel" id="phone" name="phone" required placeholder="0912xxxxxxx" dir="ltr"
-                                class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-slate-700 dark:bg-slate-800 focus:border-accent dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-100 text-sm outline-none font-mono text-left text-textMain dark:text-white transition">
+                                class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-slate-700 bg-white dark:bg-slate-800 focus:border-accent dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-100 text-sm outline-none font-mono text-left text-slate-900 dark:text-white placeholder-slate-400 transition">
                     </div>
 
                     <!-- Website URL -->
@@ -845,16 +844,16 @@
                             آدرس وب‌سایت
                         </label>
                         <input type="text" id="website_url" name="website_url" placeholder="https://yoursite.com" dir="ltr"
-                                class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-slate-700 dark:bg-slate-800 focus:border-accent dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-100 text-sm outline-none font-mono text-left text-textMain dark:text-white transition">
+                                class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-slate-700 bg-white dark:bg-slate-800 focus:border-accent dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-100 text-sm outline-none font-mono text-left text-slate-900 dark:text-white placeholder-slate-400 transition">
                     </div>
 
                     <!-- Submit CTA Button -->
                     <button type="submit" id="briefSubmitBtn" class="w-full py-3.5 sm:py-4 rounded-xl bg-accent hover:bg-blue-900 text-white font-black text-sm sm:text-base shadow-xl transition duration-150 flex items-center justify-center gap-2 mt-2">
-                        <span>ارسال مشخصات و دریافت مشاوره</span>
+                        <span id="briefSubmitText">ارسال مشخصات و دریافت مشاوره</span>
                         <i class="fas fa-arrow-left text-sm"></i>
                     </button>
 
-                    <div id="briefAlert" class="hidden p-4 rounded-xl text-center text-xs font-bold"></div>
+                    <div id="briefAlert" class="hidden p-4 rounded-xl text-center text-xs font-bold transition-all"></div>
 
                     <div class="flex items-center justify-center gap-2 text-xs text-gray-500 dark:text-slate-400 pt-1">
                         <i class="fas fa-lock text-emerald-600 dark:text-emerald-400"></i>
@@ -866,7 +865,7 @@
     </section>
 
     <!-- Contact & Direct Socials Section -->
-    <section id="contact" class="py-6 md:py-10 bg-textMain dark:bg-slate-900 text-white rounded-3xl my-4 sm:my-6 md:my-8 border border-transparent dark:border-slate-800" aria-label="شروع پروژه و ارتباط مستقیم">
+    <section id="contact" class="py-6 md:py-10 bg-[#0F172A] bg-textMain dark:bg-slate-900 text-white rounded-3xl my-4 sm:my-6 md:my-8 border border-transparent dark:border-slate-800" style="background-color: #0f172a !important;" aria-label="شروع پروژه و ارتباط مستقیم">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12 space-y-3 sm:space-y-4">
                 <h2 class="text-2xl sm:text-4xl md:text-5xl font-black text-white">ارتباط مستقیم</h2>
@@ -978,7 +977,8 @@
 
     <!-- Interactive Scripts: Persona Switcher & Smart Brief AJAX -->
     <script>
-        // 1. Persona Switcher Logic (Hyper-Personalization)
+    document.addEventListener('DOMContentLoaded', function() {
+        /* 1. Persona Switcher Logic (Hyper-Personalization) */
         const personaBtnBusiness = document.getElementById('persona-btn-business');
         const personaBtnTech = document.getElementById('persona-btn-tech');
         const heroSubtitle = document.getElementById('hero-subtitle');
@@ -986,72 +986,110 @@
         const heroPrimaryCtaText = document.getElementById('hero-primary-cta-text');
 
         function setPersona(persona) {
+            if (!heroSubtitle || !heroPitchText || !heroPrimaryCtaText) return;
             if (persona === 'tech') {
-                personaBtnTech.className = 'persona-tab active-persona px-4 py-2 rounded-xl text-xs font-black transition-all flex items-center gap-2 bg-accent dark:bg-blue-600 text-white shadow-md';
-                personaBtnBusiness.className = 'persona-tab px-4 py-2 rounded-xl text-xs font-bold text-gray-700 dark:text-gray-300 hover:text-accent transition-all flex items-center gap-2';
+                if (personaBtnTech) personaBtnTech.className = 'persona-tab active-persona px-4 py-2 rounded-xl text-xs font-black transition-all flex items-center gap-2 bg-accent dark:bg-blue-600 text-white shadow-md';
+                if (personaBtnBusiness) personaBtnBusiness.className = 'persona-tab px-4 py-2 rounded-xl text-xs font-bold text-gray-700 dark:text-gray-300 hover:text-accent transition-all flex items-center gap-2';
                 
                 heroSubtitle.innerHTML = '<span class="font-black text-accent dark:text-blue-400 inline-block" dir="ltr">Technical SEO & Data Architecture</span>';
                 heroPitchText.innerHTML = 'فعالیت در <strong>سئو تکنیکال، معماری اطلاعات، وایب کدینگ و توسعه اسکریپت‌های تحلیلی با AI، بهینه‌سازی Core Web Vitals (INP/LCP) و اسکیماهای JSON-LD</strong>؛ با ۶ سال سابقه فعالیت در <a href="https://inten.asia" target="_blank" rel="noopener" class="text-accent dark:text-blue-400 font-bold hover:underline">آژانس اینتن</a>.';
                 heroPrimaryCtaText.innerText = 'بررسی چک‌لیست تکنیکال سئو';
-                localStorage.setItem('user_persona', 'tech');
+                try { localStorage.setItem('user_persona', 'tech'); } catch (e) {}
             } else {
-                personaBtnBusiness.className = 'persona-tab active-persona px-4 py-2 rounded-xl text-xs font-black transition-all flex items-center gap-2 bg-accent dark:bg-blue-600 text-white shadow-md';
-                personaBtnTech.className = 'persona-tab px-4 py-2 rounded-xl text-xs font-bold text-gray-700 dark:text-gray-300 hover:text-accent transition-all flex items-center gap-2';
+                if (personaBtnBusiness) personaBtnBusiness.className = 'persona-tab active-persona px-4 py-2 rounded-xl text-xs font-black transition-all flex items-center gap-2 bg-accent dark:bg-blue-600 text-white shadow-md';
+                if (personaBtnTech) personaBtnTech.className = 'persona-tab px-4 py-2 rounded-xl text-xs font-bold text-gray-700 dark:text-gray-300 hover:text-accent transition-all flex items-center gap-2';
                 
                 heroSubtitle.innerHTML = '<span class="font-black text-accent dark:text-blue-400 inline-block" dir="ltr">Modern SEO & GEO</span>';
                 heroPitchText.innerHTML = 'از <strong>سال ۱۳۹۹</strong> در حوزه سئو در <a href="https://inten.asia" target="_blank" rel="noopener" class="text-accent dark:text-blue-400 font-bold hover:underline">آژانس دیجیتال مارکتینگ اینتن</a> فعالیت می‌کنم. تمرکز من بر طراحی و اجرای استراتژی‌های سئو با هدف <strong>جذب ترافیک هدفمند، افزایش مشتری و کمک به رشد فروش کسب‌وکارهاست</strong>.';
                 heroPrimaryCtaText.innerText = 'تکمیل بریف هوشمند سئو';
-                localStorage.setItem('user_persona', 'business');
+                try { localStorage.setItem('user_persona', 'business'); } catch (e) {}
             }
         }
 
         personaBtnBusiness?.addEventListener('click', () => setPersona('business'));
         personaBtnTech?.addEventListener('click', () => setPersona('tech'));
 
-        if (localStorage.getItem('user_persona') === 'tech') {
-            setPersona('tech');
-        }
-
-
-        // 3. Smart Brief Form AJAX Submit
-        document.getElementById('smartBriefForm')?.addEventListener('submit', async function(e) {
-            e.preventDefault();
-            const form = this;
-            const btn = document.getElementById('briefSubmitBtn');
-            const alertBox = document.getElementById('briefAlert');
-            const originalBtnText = btn.innerHTML;
-
-            btn.disabled = true;
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> در حال ثبت اطلاعات...';
-            alertBox.classList.add('hidden');
-
-            try {
-                const formData = new FormData(form);
-                const response = await fetch('/lead/submit', {
-                    method: 'POST',
-                    headers: {
-                        'X-Requested-With': 'XMLHttpRequest',
-                        'Accept': 'application/json'
-                    },
-                    body: formData
-                });
-
-                const result = await response.json();
-
-                if (response.ok && result.status === 'success') {
-                    alertBox.className = 'p-4 rounded-xl text-center text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200 block';
-                    alertBox.innerText = result.message || 'بریف شما با موفقیت ثبت شد.';
-                    form.reset();
-                } else {
-                    alertBox.className = 'p-4 rounded-xl text-center text-xs font-bold bg-rose-50 text-rose-700 border border-rose-200 block';
-                    alertBox.innerText = result.message || 'خطایی در ثبت اطلاعات رخ داد. لطفاً فیلدهای ضروری را پر کنید.';
-                }
-            } catch (err) {
-                alertBox.className = 'p-4 rounded-xl text-center text-xs font-bold bg-rose-50 text-rose-700 border border-rose-200 block';
-                alertBox.innerText = 'خطا در ارتباط با سرور. لطفاً مجدداً تلاش کنید یا مستقیماً تماس بگیرید.';
-            } finally {
-                btn.disabled = false;
-                btn.innerHTML = originalBtnText;
+        try {
+            if (localStorage.getItem('user_persona') === 'tech') {
+                setPersona('tech');
             }
-        });
+        } catch (e) {}
+
+        /* 2. Smart Brief Form AJAX Submit */
+        const briefForm = document.getElementById('smartBriefForm');
+        if (briefForm) {
+            briefForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                const form = this;
+                const btn = document.getElementById('briefSubmitBtn');
+                const btnText = document.getElementById('briefSubmitText');
+                const alertBox = document.getElementById('briefAlert');
+                const originalBtnText = btnText ? btnText.innerText : 'ارسال مشخصات و دریافت مشاوره';
+
+                if (btn) {
+                    btn.disabled = true;
+                    btn.classList.add('opacity-75', 'cursor-not-allowed');
+                }
+                if (btnText) {
+                    btnText.innerHTML = '<i class="fas fa-spinner fa-spin ml-2"></i> در حال ثبت اطلاعات...';
+                }
+                if (alertBox) {
+                    alertBox.classList.add('hidden');
+                }
+
+                try {
+                    const formData = new FormData(form);
+                    const response = await fetch('/lead/submit', {
+                        method: 'POST',
+                        headers: {
+                            'X-Requested-With': 'XMLHttpRequest',
+                            'Accept': 'application/json'
+                        },
+                        body: formData
+                    });
+
+                    const result = await response.json().catch(() => null);
+
+                    if (response.ok && result && result.status === 'success') {
+                        if (alertBox) {
+                            alertBox.className = 'p-5 rounded-2xl bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 text-emerald-800 dark:text-emerald-200 block shadow-sm';
+                            alertBox.innerHTML = `
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-xl bg-emerald-500 text-white flex items-center justify-center shrink-0 font-bold">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <div class="text-right">
+                                        <div class="font-black text-sm">${result.message || 'درخواست مشاوره با موفقیت ثبت شد.'}</div>
+                                        <div class="text-[11px] text-emerald-700 dark:text-emerald-300 mt-0.5">پیام به تلگرام مهندس مفتخری ارسال شد. به‌زودی با شما تماس می‌گیریم.</div>
+                                    </div>
+                                </div>
+                            `;
+                            alertBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                        }
+                        form.reset();
+                    } else {
+                        const errMsg = (result && result.message) ? result.message : 'خطایی در ثبت اطلاعات رخ داد. لطفاً فیلدهای ضروری را پر کنید.';
+                        if (alertBox) {
+                            alertBox.className = 'p-4 rounded-xl text-center text-xs font-bold bg-rose-50 dark:bg-rose-950/60 text-rose-800 dark:text-rose-200 border border-rose-200 dark:border-rose-800 block';
+                            alertBox.innerText = errMsg;
+                        }
+                    }
+                } catch (err) {
+                    console.error('Submission error:', err);
+                    if (alertBox) {
+                        alertBox.className = 'p-4 rounded-xl text-center text-xs font-bold bg-rose-50 dark:bg-rose-950/60 text-rose-800 dark:text-rose-200 border border-rose-200 dark:border-rose-800 block';
+                        alertBox.innerText = 'خطا در ارتباط با سرور. لطفاً مجدداً تلاش کنید یا مستقیماً از طریق تلگرام پیام دهید.';
+                    }
+                } finally {
+                    if (btn) {
+                        btn.disabled = false;
+                        btn.classList.remove('opacity-75', 'cursor-not-allowed');
+                    }
+                    if (btnText) {
+                        btnText.innerText = originalBtnText;
+                    }
+                }
+            });
+        }
+    });
     </script>
