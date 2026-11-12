@@ -58,29 +58,10 @@ if (empty($schemaJsonLd) && !empty($schemas) && is_array($schemas)) {
     <link rel="preload" href="/assets/css/app.min.css?v=2.2" as="style">
     <link rel="stylesheet" href="/assets/css/app.min.css?v=2.2">
 
-    <!-- FontAwesome: Load ONLY after first user interaction (zero render blocking) -->
-    <script>
-    (function(){
-        var faLoaded = false;
-        function loadFA() {
-            if (faLoaded) return;
-            faLoaded = true;
-            var l = document.createElement('link');
-            l.rel = 'stylesheet';
-            l.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
-            document.head.appendChild(l);
-        }
-        // Load on first interaction OR after 3 seconds idle
-        ['click','scroll','touchstart','keydown','mousemove'].forEach(function(e){
-            document.addEventListener(e, loadFA, {once:true, passive:true});
-        });
-        if ('requestIdleCallback' in window) {
-            requestIdleCallback(loadFA, {timeout: 3000});
-        } else {
-            setTimeout(loadFA, 3000);
-        }
-    })();
-    </script>
+    <!-- FontAwesome 6 (Self-hosted locally for 100% stability in Iran & 0ms icon load) -->
+    <link rel="preload" href="/assets/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css?v=6.5.1">
 
     <script>
         // Automatic standard device theme detection (follows user OS / browser setting)
@@ -98,7 +79,7 @@ if (empty($schemaJsonLd) && !empty($schemas) && is_array($schemas)) {
     </script>
     
     <style>
-        body, html, input, button, select, textarea, optgroup, option, p, span, h1, h2, h3, h4, h5, h6, a, div, li, ul, ol {
+        body, html, input, button, select, textarea, optgroup, option, p, span:not([class*="fa"]), h1, h2, h3, h4, h5, h6, a, div:not([class*="fa"]), li, ul, ol {
             font-family: 'Vazirmatn', 'Vazirmatn FD', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
         }
 
@@ -109,7 +90,6 @@ if (empty($schemaJsonLd) && !empty($schemas) && is_array($schemas)) {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             text-rendering: optimizeLegibility;
-            /* transition removed: causes forced reflow during initial paint */
         }
 
         .dark body, html.dark body {
@@ -117,13 +97,39 @@ if (empty($schemaJsonLd) && !empty($schemas) && is_array($schemas)) {
             color: #F1F5F9;
         }
 
-        /* Protect FontAwesome Icons from being overridden by text font */
-        .fa, .fas, .fab, .far, .fa-solid, .fa-brands, .fa-regular,
-        .fa::before, .fas::before, .fab::before, .far::before, .fa-solid::before, .fa-brands::before, .fa-regular::before {
-            font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", FontAwesome !important;
+        /* Complete Bulletproof Protection for FontAwesome Icons */
+        .fa, .fas, .fa-solid,
+        .fa::before, .fas::before, .fa-solid::before {
+            font-family: "Font Awesome 6 Free" !important;
+            font-weight: 900 !important;
+            font-style: normal !important;
+            font-variant: normal !important;
+            line-height: 1 !important;
+            text-rendering: auto !important;
+            display: inline-block !important;
         }
-        .fab, .fab::before, .fa-brands, .fa-brands::before {
+        .far, .fa-regular,
+        .far::before, .fa-regular::before {
+            font-family: "Font Awesome 6 Free" !important;
+            font-weight: 400 !important;
+            font-style: normal !important;
+            font-variant: normal !important;
+            line-height: 1 !important;
+            text-rendering: auto !important;
+            display: inline-block !important;
+        }
+        .fab, .fa-brands,
+        .fab::before, .fa-brands::before {
             font-family: "Font Awesome 6 Brands" !important;
+            font-weight: 400 !important;
+            font-style: normal !important;
+            font-variant: normal !important;
+            line-height: 1 !important;
+            text-rendering: auto !important;
+            display: inline-block !important;
+        }
+        .fa-sparkles:before {
+            content: "\f0d0" !important;
         }
         
         .glass-header {
@@ -176,6 +182,22 @@ if (empty($schemaJsonLd) && !empty($schemas) && is_array($schemas)) {
     </style>
 
     <!-- Injected JSON-LD Schema (GEO/AEO) -->
+    <!-- Agent-Ready Knowledge Graph (OpenAI Operator / Claude / Gemini / MCP) -->
+    <?php
+    if (file_exists(ROOT_PATH . '/includes/agent-schema.php')) {
+        require_once ROOT_PATH . '/includes/agent-schema.php';
+        $reqUri = $_SERVER['REQUEST_URI'] ?? '/';
+        $pageSchemaType = 'home';
+        if (str_contains($reqUri, 'mcp-automation')) {
+            $pageSchemaType = 'mcp-automation';
+        } elseif (str_contains($reqUri, 'mcp-simulator')) {
+            $pageSchemaType = 'mcp-simulator';
+        } elseif (str_contains($reqUri, 'seo-strategy') || str_contains($reqUri, 'technical-seo')) {
+            $pageSchemaType = 'seo-strategy';
+        }
+        echo \App\Core\AgentSchema::render($pageSchemaType);
+    }
+    ?>
     <?php if (!empty($schemaJsonLd)): ?>
         <script type="application/ld+json">
             <?= $schemaJsonLd ?>
@@ -186,6 +208,32 @@ if (empty($schemaJsonLd) && !empty($schemas) && is_array($schemas)) {
     
 </head>
 <body class="antialiased selection:bg-accent selection:text-white flex flex-col min-h-screen dark:bg-[#0B1120] dark:text-slate-100">
+
+    <?php if (isset($_GET['status']) && $_GET['status'] === 'lead_received'): ?>
+        <!-- اعلان سراسری ثبت موفقیت‌آمیز فرم مشاوره -->
+        <div id="globalLeadToast" class="fixed top-24 left-1/2 -translate-x-1/2 z-[9999] max-w-lg w-[92%] bg-white dark:bg-slate-900 border-2 border-emerald-500 rounded-2xl p-4 shadow-2xl flex items-center gap-3.5 transition-all duration-500">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center shrink-0 text-lg shadow-md shadow-emerald-500/30">
+                <i class="fas fa-check"></i>
+            </div>
+            <div class="flex-1 min-w-0">
+                <h4 class="text-xs sm:text-sm font-black text-slate-900 dark:text-white">درخواست مشاوره شما با موفقیت ثبت شد!</h4>
+                <p class="text-[11px] sm:text-xs text-slate-600 dark:text-slate-300 mt-0.5 leading-relaxed">اطلاعات شما دریافت شد و نوتیفیکیشن لحظه‌ای به تلگرام مهندس محمد مفتخری ارسال گردید. به‌زودی با شما تماس گرفته خواهد شد.</p>
+            </div>
+            <button onclick="document.getElementById('globalLeadToast').remove()" class="text-slate-400 hover:text-slate-600 p-1" aria-label="بستن پیام">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <script>
+            setTimeout(function() {
+                var toast = document.getElementById('globalLeadToast');
+                if (toast) {
+                    toast.style.opacity = '0';
+                    toast.style.transform = 'translate(-50%, -20px)';
+                    setTimeout(function() { toast.remove(); }, 500);
+                }
+            }, 8000);
+        </script>
+    <?php endif; ?>
 
     <!-- Navbar -->
     <nav class="fixed w-full z-50 glass-header transition-all duration-300" id="navbar">
@@ -509,9 +557,9 @@ if (empty($schemaJsonLd) && !empty($schemas) && is_array($schemas)) {
         });
     </script>
 
-    <!-- Smart Sales Assistant AI Chatbot Widget (Gemini Powered) -->
-    <?php if (file_exists(ROOT_PATH . '/views/front/partials/chat-widget.php')): ?>
-        <?php require ROOT_PATH . '/views/front/partials/chat-widget.php'; ?>
+    <!-- Speed-Dial Floating Contact Widget (Direct Phone & Messaging Channels) -->
+    <?php if (file_exists(ROOT_PATH . '/views/front/partials/floating-contact.php')): ?>
+        <?php require ROOT_PATH . '/views/front/partials/floating-contact.php'; ?>
     <?php endif; ?>
     <!-- Google Preferred Sources (Deferred for PageSpeed) -->
     <script defer src="https://news.google.com/swg/js/v1/publisher.js"></script>
