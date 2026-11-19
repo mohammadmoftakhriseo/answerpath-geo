@@ -354,9 +354,15 @@ class CacheManager
 
     /**
      * Helper to set custom response headers if headers haven't been sent.
+     * Stealth Mode: Suppresses internal architectural fingerprints and diagnostic headers in production.
      */
     private function sendHeader(string $name, string $value): void
     {
+        // Stealth Protection: Do not leak internal cache or rendering engine architecture to public callers
+        if (str_starts_with($name, 'X-Render-') || str_starts_with($name, 'X-Cache-')) {
+            return;
+        }
+
         if (!headers_sent()) {
             header($name . ': ' . $value);
         }
