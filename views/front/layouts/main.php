@@ -22,24 +22,23 @@ if (empty($schemaJsonLd) && !empty($schemas) && is_array($schemas)) {
     
     <!-- SEO Meta Tags -->
     <meta name="description" content="<?= e($description ?? 'وب‌سایت رسمی محمد مفتخری (Mohammad Moftakhari)، کارشناس ارشد سئو و معمار هوش مصنوعی با بیش از ۶ سال سابقه در آژانس دیجیتال مارکتینگ اینتن.') ?>">
-    <meta name="keywords" content="محمد مفتخری, Mohammad Moftakhari, Mohammad Moftakhar, Mohammad Moftakhari Rostamkhani, محمد مفتخری رستم خانی, maaadmr, maaad_mr, سئو, متخصص سئو, کارشناس سئو, دیجیتال مارکتینگ, اینتن">
+    <meta name="keywords" content="محمد مفتخری, Mohammad Moftakhari, Mohammad Moftakhar, Mohammad Moftakhari Rostamkhani, محمد مفتخری رستم خانی, maaadmr, maaad_mr, سئو, کارشناس سئو, بهینه‌سازی نرخ تبدیل, CRO, دیجیتال مارکتینگ">
     <meta name="author" content="Mohammad Moftakhari (محمد مفتخری)">
     <meta name="robots" content="index, follow">
     <meta name="enamad" content="79378573">
     <link rel="canonical" href="<?= e($canonical ?? url('/')) ?>">
     <link rel="alternate" type="text/plain" href="<?= url('/llms.txt') ?>" title="LLMs Context">
-    <link rel="alternate" type="text/plain" href="<?= url('/ai-context.md') ?>" title="AI Context Markdown">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="<?= e($title ?? 'محمد مفتخری (Mohammad Moftakhari) | متخصص سئو') ?>">
-    <meta property="og:description" content="<?= e($description ?? 'وب‌سایت رسمی محمد مفتخری (Mohammad Moftakhari)، کارشناس ارشد سئو و معمار سیستم‌های هوش مصنوعی.') ?>">
+    <meta property="og:title" content="<?= e($title ?? 'محمد مفتخری (Mohammad Moftakhari) | Mid-level SEO & CRO') ?>">
+    <meta property="og:description" content="<?= e($description ?? 'محمد مفتخری (Mohammad Moftakhari) | Mid-level SEO & CRO | GEO, AEO & Agentic Workflows | Vibe Coding - سئو و بهینه‌سازی نرخ تبدیل (CRO)، رشد ارگانیک و افزایش فروش در نسل جدید جستجو هوش مصنوعی.') ?>">
     <meta property="og:url" content="<?= e($canonical ?? url('/')) ?>">
     <meta property="og:site_name" content="Mohammad Moftakhari | محمد مفتخری">
     <meta property="og:type" content="website">
     <meta property="og:image" content="<?= url('/assets/images/mohammadmoftakhari.jpg') ?>">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="<?= e($title ?? 'محمد مفتخری (Mohammad Moftakhari)') ?>">
-    <meta name="twitter:description" content="<?= e($description ?? 'سایت رسمی محمد مفتخری (Mohammad Moftakhari)، متخصص سئو و معمار هوش مصنوعی.') ?>">
+    <meta name="twitter:title" content="<?= e($title ?? 'محمد مفتخری (Mohammad Moftakhari) | Mid-level SEO & CRO') ?>">
+    <meta name="twitter:description" content="<?= e($description ?? 'محمد مفتخری (Mohammad Moftakhari) | Mid-level SEO & CRO | GEO, AEO & Agentic Workflows | Vibe Coding - سئو و بهینه‌سازی نرخ تبدیل (CRO)، رشد ارگانیک و افزایش فروش.') ?>">
 
     <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico?v=3">
@@ -50,9 +49,9 @@ if (empty($schemaJsonLd) && !empty($schemas) && is_array($schemas)) {
     <link rel="shortcut icon" href="/favicon.ico?v=3">
 
     <!-- Font Preload & Full Vazirmatn Typography (All weights & Unicode ranges) -->
-    <link rel="preload" href="/assets/fonts/Vazirmatn-400.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/assets/fonts/Vazirmatn-700.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/assets/fonts/vazirmatn.css">
+    <link rel="preload" href="/assets/fonts/Vazirmatn-400.woff2?v=33.1" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/Vazirmatn-700.woff2?v=33.1" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/assets/fonts/vazirmatn.css?v=33.1">
     <!-- Pre-Compiled Production CSS (Replaces runtime cdn.tailwindcss.com) -->
     <!-- Fast Preloaded & Cached Production CSS -->
     <link rel="preload" href="/assets/css/app.min.css?v=2.2" as="style">
@@ -171,7 +170,189 @@ if (empty($schemaJsonLd) && !empty($schemas) && is_array($schemas)) {
             background-size: 24px 24px;
             opacity: 0.06;
         }
+
+        /* ==========================================================================
+           GLOBAL BULLETPROOF DARK MODE CONTRAST & SITEWIDE FIX
+           (حل قطعی تضاد رنگی، خوانایی متن‌ها و حذف پس‌زمینه‌های سفید در تم دارک)
+           ========================================================================== */
+        html.dark body, .dark body {
+            background-color: #0B1120 !important;
+            color: #F1F5F9 !important;
+        }
+
+        html.dark .card, .dark .card {
+            background-color: #151F32 !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+            color: #F1F5F9 !important;
+        }
+
+        html.dark .bg-white:not([class*="bg-white/"]),
+        .dark .bg-white:not([class*="bg-white/"]),
+        html.dark .bg-gray-50,
+        .dark .bg-gray-50,
+        html.dark .bg-gray-100,
+        .dark .bg-gray-100,
+        html.dark .bg-slate-50,
+        .dark .bg-slate-50,
+        html.dark .bg-slate-100,
+        .dark .bg-slate-100 {
+            background-color: #151F32 !important;
+            border-color: rgba(255, 255, 255, 0.08) !important;
+        }
+
+        /* Typography & Headings in Dark Mode */
+        html.dark h1, .dark h1,
+        html.dark h2, .dark h2,
+        html.dark h3, .dark h3,
+        html.dark h4, .dark h4 {
+            color: #F8FAFC !important;
+        }
+
+        html.dark p, .dark p,
+        html.dark li, .dark li {
+            color: #CBD5E1 !important;
+        }
+
+        html.dark strong, .dark strong,
+        html.dark b, .dark b {
+            color: #FFFFFF !important;
+        }
+
+        html.dark .text-textMain, .dark .text-textMain,
+        html.dark .text-gray-900, .dark .text-gray-900,
+        html.dark .text-gray-800, .dark .text-gray-800,
+        html.dark .text-gray-700, .dark .text-gray-700 {
+            color: #F1F5F9 !important;
+        }
+
+        html.dark .text-gray-600, .dark .text-gray-600,
+        html.dark .text-gray-500, .dark .text-gray-500 {
+            color: #94A3B8 !important;
+        }
+
+        /* Form Inputs & Textareas in Dark Mode */
+        html.dark input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]),
+        .dark input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]),
+        html.dark textarea, .dark textarea,
+        html.dark select, .dark select {
+            background-color: #0F172A !important;
+            color: #F8FAFC !important;
+            border-color: #334155 !important;
+        }
+
+        /* Roadmap Generator (نقشه راه) Styling in Light & Dark Modes */
+        #resultContainer {
+            background-color: #FFFFFF;
+            border-color: #E2E8F0;
+        }
+
+        #roadmapContent {
+            background-color: #FFFFFF !important;
+            border-color: #E2E8F0 !important;
+            color: #1E293B !important;
+        }
+        #roadmapContent p, #roadmapContent li, #roadmapContent span, #roadmapContent div {
+            color: #334155 !important;
+        }
+        #roadmapContent strong, #roadmapContent b {
+            color: #0F172A !important;
+        }
+        #roadmapContent h2 {
+            color: #1E3A8A !important;
+            border-bottom: 1px solid #E2E8F0 !important;
+        }
+        #roadmapContent h3 {
+            color: #2563EB !important;
+        }
+        #roadmapContent h4 {
+            color: #0284C7 !important;
+        }
+
+        html.dark #resultContainer, .dark #resultContainer {
+            background-color: #151F32 !important;
+            border-color: rgba(56, 189, 248, 0.35) !important;
+        }
+
+        html.dark #roadmapContent, .dark #roadmapContent {
+            background-color: #0B132B !important;
+            border-color: rgba(56, 189, 248, 0.35) !important;
+            color: #E2E8F0 !important;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+        }
+
+        html.dark #roadmapContent p, .dark #roadmapContent p,
+        html.dark #roadmapContent li, .dark #roadmapContent li,
+        html.dark #roadmapContent span, .dark #roadmapContent span,
+        html.dark #roadmapContent div, .dark #roadmapContent div {
+            color: #CBD5E1 !important;
+        }
+
+        html.dark #roadmapContent h2, .dark #roadmapContent h2 {
+            color: #38BDF8 !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+        }
+
+        html.dark #roadmapContent h3, .dark #roadmapContent h3 {
+            color: #67E8F9 !important;
+        }
+
+        html.dark #roadmapContent h4, .dark #roadmapContent h4 {
+            color: #93C5FD !important;
+        }
+
+        html.dark #roadmapContent strong, .dark #roadmapContent strong,
+        html.dark #roadmapContent b, .dark #roadmapContent b {
+            color: #FFFFFF !important;
+        }
+
+        html.dark .chip-btn, .dark .chip-btn {
+            background-color: #1E293B !important;
+            border-color: #334155 !important;
+            color: #E2E8F0 !important;
+        }
+
+        /* Utility classes compiled directly to protect uncompiled Tailwind dark classes */
+        .dark .dark\:bg-slate-900\/80 { background-color: rgba(15, 23, 42, 0.8) !important; }
+        .dark .dark\:bg-slate-800\/60 { background-color: rgba(30, 41, 59, 0.6) !important; }
+        .dark .dark\:bg-slate-900\/50 { background-color: rgba(15, 23, 42, 0.5) !important; }
+        .dark .dark\:bg-slate-900\/70 { background-color: rgba(15, 23, 42, 0.7) !important; }
+        .dark .dark\:bg-slate-900\/90 { background-color: rgba(15, 23, 42, 0.9) !important; }
+        .dark .dark\:bg-blue-950\/50 { background-color: rgba(23, 37, 84, 0.5) !important; }
+        .dark .dark\:bg-blue-900\/60 { background-color: rgba(30, 58, 138, 0.6) !important; }
+        .dark .dark\:bg-emerald-950\/60 { background-color: rgba(2, 44, 34, 0.6) !important; }
+        .dark .dark\:bg-rose-950\/50 { background-color: rgba(76, 5, 25, 0.5) !important; }
+        .dark .dark\:bg-amber-950\/50 { background-color: rgba(69, 26, 3, 0.5) !important; }
+        .dark .dark\:border-white\/10 { border-color: rgba(255, 255, 255, 0.1) !important; }
+        .dark .dark\:border-slate-800 { border-color: #1E293B !important; }
+        .dark .dark\:border-slate-700 { border-color: #334155 !important; }
+        .dark .dark\:border-blue-500\/30 { border-color: rgba(59, 130, 246, 0.3) !important; }
+        .dark .dark\:border-blue-500\/40 { border-color: rgba(59, 130, 246, 0.4) !important; }
+        .dark .dark\:text-blue-400 { color: #60A5FA !important; }
+        .dark .dark\:text-blue-300 { color: #93C5FD !important; }
+        .dark .dark\:text-cyan-400 { color: #22D3EE !important; }
+        .dark .dark\:text-cyan-300 { color: #67E8F9 !important; }
+        .dark .dark\:text-emerald-400 { color: #34D399 !important; }
+        .dark .dark\:text-emerald-300 { color: #6EE7B7 !important; }
+        .dark .dark\:text-amber-400 { color: #FBBF24 !important; }
+        .dark .dark\:text-amber-200 { color: #FDE68A !important; }
+        .dark .dark\:text-rose-400 { color: #FB7185 !important; }
+        .dark .dark\:text-rose-200 { color: #FECDD3 !important; }
+        .dark .dark\:text-slate-100 { color: #F1F5F9 !important; }
+        .dark .dark\:text-slate-200 { color: #E2E8F0 !important; }
+        .dark .dark\:text-slate-300 { color: #CBD5E1 !important; }
+        .dark .dark\:text-slate-400 { color: #94A3B8 !important; }
+        .dark .dark\:text-white { color: #FFFFFF !important; }
         
+        /* Sitewide Guaranteed Footer Separation & Balanced Spacing */
+        #main-content {
+            padding-bottom: 5rem !important;
+        }
+        @media (min-width: 640px) {
+            #main-content {
+                padding-bottom: 7rem !important;
+            }
+        }
+
         /* Smooth micro-interactions */
         .interactive-scale {
             transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -259,7 +440,7 @@ if (empty($schemaJsonLd) && !empty($schemas) && is_array($schemas)) {
                     <!-- Dropdown Services -->
                     <div class="relative group">
                         <button type="button" class="text-sm font-bold text-slate-700 dark:text-slate-300 hover:text-accent dark:hover:text-blue-400 flex items-center gap-1.5 py-2 transition-colors">
-                            <span>خدمات تخصصی سئو</span>
+                            <span>خدمات سئو و رشد</span>
                             <i class="fas fa-chevron-down text-[10px] group-hover:rotate-180 transition-transform duration-200"></i>
                         </button>
                         <div class="absolute right-0 top-full pt-2 w-72 hidden group-hover:block transition-all z-50">
@@ -371,7 +552,7 @@ if (empty($schemaJsonLd) && !empty($schemas) && is_array($schemas)) {
                 <a href="/" class="block px-3 py-2 rounded-xl text-sm font-bold text-slate-800 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800">صفحه اصلی</a>
                 <a href="/about" class="block px-3 py-2 rounded-xl text-sm font-bold text-slate-800 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800">درباره من</a>
                 <div class="pt-2 pb-1 border-t border-slate-100 dark:border-slate-800">
-                    <span class="px-3 text-[11px] font-bold text-slate-400 block mb-1">خدمات تخصصی:</span>
+                    <span class="px-3 text-[11px] font-bold text-slate-400 block mb-1">خدمات سئو و وب:</span>
                     <a href="/services/seo-strategy" class="block px-3 py-1.5 text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-accent">استراتژی و مشاوره جامع</a>
                     <a href="/services/technical-seo" class="block px-3 py-1.5 text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-accent">سئوی تکنیکال و سرعت</a>
                     <a href="/services/ai-automation" class="block px-3 py-1.5 text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-accent">اتوماسیون هوش مصنوعی</a>
@@ -392,7 +573,7 @@ if (empty($schemaJsonLd) && !empty($schemas) && is_array($schemas)) {
     </nav>
 
     <!-- Dynamic Main Content -->
-    <main id="main-content" class="flex-grow pt-20 md:pt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+    <main id="main-content" class="flex-grow pt-20 md:pt-24 pb-16 sm:pb-24 lg:pb-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <?= $content ?>
     </main>
 
@@ -438,9 +619,9 @@ if (empty($schemaJsonLd) && !empty($schemas) && is_array($schemas)) {
                     </div>
                 </div>
 
-                <!-- ستون ۲: خدمات تخصصی (3 cols) -->
+                <!-- ستون ۲: خدمات (3 cols) -->
                 <div class="lg:col-span-3 space-y-3">
-                    <h4 class="text-white font-bold text-sm">خدمات تخصصی</h4>
+                    <h4 class="text-white font-bold text-sm">خدمات سئو و رشد</h4>
                     <ul class="space-y-2.5 text-xs text-slate-400">
                         <li><a href="/services/seo-strategy" class="hover:text-blue-400 transition">مشاوره و استراتژی کلان سئو</a></li>
                         <li><a href="/services/technical-seo" class="hover:text-blue-400 transition">سئوی تکنیکال و افزایش سرعت</a></li>
