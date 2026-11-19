@@ -187,8 +187,51 @@
                 </button>
             </div>
 
-            <!-- Content Area (Persian Optimized Typography) -->
-            <div class="bg-gray-50 dark:bg-slate-900/90 p-5 sm:p-8 rounded-2xl border border-gray-200 dark:border-slate-800 text-sm sm:text-base text-textMain dark:text-slate-200 leading-relaxed space-y-4 font-sans" id="roadmapContent">
+            <!-- Content Area (Persian Optimized Typography & 100% Bulletproof Contrast in Both Light & Dark Modes) -->
+            <style>
+                #roadmapContent {
+                    background-color: #FFFFFF !important;
+                    border: 1px solid #E2E8F0 !important;
+                    color: #1E293B !important;
+                }
+                #roadmapContent p, #roadmapContent li, #roadmapContent span, #roadmapContent div {
+                    color: #334155 !important;
+                }
+                #roadmapContent strong, #roadmapContent b {
+                    color: #0F172A !important;
+                }
+                #roadmapContent h2 {
+                    color: #1E3A8A !important;
+                    border-bottom: 1px solid #E2E8F0 !important;
+                }
+                #roadmapContent h3 { color: #2563EB !important; }
+                #roadmapContent h4 { color: #0284C7 !important; }
+
+                /* حالت دارک ۱۰۰٪ قطعی و خوانا بدون سفیدی */
+                html.dark #roadmapContent, .dark #roadmapContent {
+                    background-color: #0B132B !important;
+                    border: 1px solid rgba(56, 189, 248, 0.35) !important;
+                    color: #E2E8F0 !important;
+                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+                }
+                html.dark #roadmapContent p, .dark #roadmapContent p,
+                html.dark #roadmapContent li, .dark #roadmapContent li,
+                html.dark #roadmapContent span, .dark #roadmapContent span,
+                html.dark #roadmapContent div, .dark #roadmapContent div {
+                    color: #CBD5E1 !important;
+                }
+                html.dark #roadmapContent strong, .dark #roadmapContent strong,
+                html.dark #roadmapContent b, .dark #roadmapContent b {
+                    color: #FFFFFF !important;
+                }
+                html.dark #roadmapContent h2, .dark #roadmapContent h2 {
+                    color: #38BDF8 !important;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+                }
+                html.dark #roadmapContent h3, .dark #roadmapContent h3 { color: #67E8F9 !important; }
+                html.dark #roadmapContent h4, .dark #roadmapContent h4 { color: #93C5FD !important; }
+            </style>
+            <div class="p-5 sm:p-8 rounded-2xl border text-sm sm:text-base leading-relaxed space-y-4 font-sans bg-white dark:bg-[#0B132B] border-gray-200 dark:border-blue-500/30 text-slate-800 dark:text-slate-100 shadow-inner" id="roadmapContent">
                 <?php
                 $renderedHtml = htmlspecialchars($roadmapResult, ENT_QUOTES, 'UTF-8');
                 // Clean any trailing or leading excessive hash characters
