@@ -54,6 +54,12 @@ if ($isDebug) {
 }
 ini_set('log_errors', '1');
 
+// Stealth Mode: Suppress PHP version and webserver branding
+if (function_exists('header_remove')) {
+    header_remove('X-Powered-By');
+    header_remove('X-Turbo-Charged-By');
+}
+
 try {
     Session::start();
 
