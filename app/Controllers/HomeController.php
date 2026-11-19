@@ -37,7 +37,7 @@ class HomeController extends Controller
 
         $this->render('front/home', [
             'title'        => 'محمد مفتخری (Mohammad Moftakhari) | کارشناس و استراتژیست سئو',
-            'description'  => 'وب‌سایت رسمی محمد مفتخری (Mohammad Moftakhari)، متخصص سئو و معمار هوش مصنوعی. استراتژی جامع سئو تکنیکال، رشد ارگانیک، CRO و هوش مصنوعی.',
+            'description'  => 'وب‌سایت رسمی محمد مفتخری (Mohammad Moftakhari)، کارشناس Mid-level SEO & CRO. استراتژی سئو تکنیکال، رشد ارگانیک، بهینه‌سازی نرخ تبدیل و اتوماسیون داده‌محور.',
             'schemaJsonLd' => $schemaJsonLd,
             'canonical'    => url('/'),
             'projects'     => $projects,
