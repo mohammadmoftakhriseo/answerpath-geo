@@ -1,4 +1,4 @@
-<div class="py-12 md:py-16 space-y-12">
+<div class="pt-6 sm:pt-8 pb-12 sm:pb-16 space-y-10 sm:space-y-12">
     <!-- Header -->
     <div class="text-center max-w-3xl mx-auto space-y-4">
         <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-100 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800/80 text-accent dark:text-blue-400 text-xs font-bold">
