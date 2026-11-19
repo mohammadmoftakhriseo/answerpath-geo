@@ -25,27 +25,27 @@
             <!-- بج هویت -->
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-slate-800 text-textMain dark:text-slate-200 text-xs sm:text-sm font-bold shadow-sm border border-gray-200 dark:border-slate-700 mb-6">
                 <span class="w-2.5 h-2.5 rounded-full bg-accent animate-pulse"></span>
-                <span>محمد مفتخری (Mohammad Moftakhari) | Senior SEO & AI Architect</span>
+                <span>درباره محمد مفتخری | سوابق و رویکرد کاری</span>
             </div>
 
-            <!-- تیتر اصلی مانیفست -->
+            <!-- تیتر اصلی درباره من -->
             <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-black text-textMain dark:text-white leading-[1.35] sm:leading-[1.3] mb-6 max-w-4xl mx-auto">
-                من فقط سئو نمی‌کنم؛ <br class="hidden sm:inline">
-                <span class="text-accent dark:text-blue-400">
-                    من ماشین‌های رشد می‌سازم
+                درباره <span class="text-accent dark:text-blue-400">محمد مفتخری</span>؛ <br class="hidden sm:inline">
+                <span class="text-base sm:text-xl md:text-2xl font-bold text-slate-700 dark:text-slate-300 block mt-3">
+                    سئو و بهینه‌سازی نرخ تبدیل (CRO)، رشد ارگانیک و افزایش فروش
                 </span>
             </h1>
 
             <!-- پاراگراف مانیفست -->
             <p class="text-base sm:text-lg text-slate-700 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed mb-8 text-justify sm:text-center font-normal">
-                سئوی مدرن با چک‌لیست‌های تکراری تمام شده است. من، <strong>محمد مفتخری (Mohammad Moftakhari)</strong>، با بیش از ۶ سال سابقه مستمر در <a href="https://inten.asia" target="_blank" rel="noopener" class="text-accent dark:text-blue-400 font-bold hover:underline">آژانس دیجیتال مارکتینگ اینتن</a>، تخصصم را در نقطه تلاقی <strong>مهندسی نرم‌افزار</strong>، <strong>دیباگ عمیق زیرساخت و سئو تکنیکال</strong> و <strong>اتوماسیون‌های هوش مصنوعی (LLMs)</strong> قرار داده‌ام؛ ساخت پلتفرم‌هایی فوق‌العاده سریع، ساختاریافته برای موتورهای جستجو و تبدیل‌کننده برای رشد فروش بیزینس‌ها.
+                سلام، من <strong>محمد مفتخری (Mohammad Moftakhari)</strong> هستم؛ با این رویکرد تجربی و شفاف که سئو را نه صرفاً بالا آوردن چند کلمه در نتایج، بلکه زیرساخت رشد تجاری و درآمدزایی کسب‌وکار می‌دانم. در طول بیش از ۶ سال فعالیت مستمر در <a href="https://inten.asia" target="_blank" rel="noopener" class="text-accent dark:text-blue-400 font-bold hover:underline">آژانس دیجیتال مارکتینگ اینتن</a> و مدیریت ده‌ها پروژه سئوی شرکتی، صنعتی و B2B، به این باور رسیده‌ام که ترافیک بدون فروش هیچ ارزشی برای کارفرما خلق نمی‌کند. به همین دلیل تمرکز من بر تلفیق <strong>سئوی تکنیکال و داده‌محور</strong> با <strong>بهینه‌سازی نرخ تبدیل (CRO)</strong> و بهره‌گیری از <strong>فناوری‌های مدرن جستجوی هوش مصنوعی (GEO/AEO)</strong> است؛ تا کسب‌وکار شما هم در موتورهای جستجو، هم در پاسخ‌های هوش مصنوعی و از همه مهم‌تر در تصمیم نهایی مخاطبان برای خرید، پیشتاز بازار باشد.
             </p>
 
             <!-- کارت‌های آمار کلیدی -->
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto">
                 <div class="p-5 rounded-2xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 shadow-sm text-center">
                     <span class="block text-3xl font-black text-accent dark:text-blue-400 font-mono">+۶</span>
-                    <span class="text-xs text-slate-600 dark:text-slate-400 mt-1 font-bold block">سال سابقه تخصصی</span>
+                    <span class="text-xs text-slate-600 dark:text-slate-400 mt-1 font-bold block">سال فعالیت حرفه‌ای</span>
                 </div>
                 <div class="p-5 rounded-2xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 shadow-sm text-center">
                     <span class="block text-3xl font-black text-accent dark:text-blue-400 font-mono">+۵۰</span>
@@ -86,7 +86,7 @@
                 <span class="absolute -right-[9px] top-2 w-4 h-4 rounded-full bg-accent border-4 border-white dark:border-slate-900 shadow-sm"></span>
                 <div class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 hover:border-accent/40 transition-all duration-300 shadow-sm">
                     <div class="flex flex-wrap items-center justify-between gap-3 mb-2">
-                        <h3 class="text-lg sm:text-xl font-black text-textMain dark:text-white">متخصص ارشد سئو و مدیر پروژه‌های دیجیتال</h3>
+                        <h3 class="text-lg sm:text-xl font-black text-textMain dark:text-white">کارشناس سئو و مدیر پروژه‌های دیجیتال</h3>
                         <span class="px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950 text-accent dark:text-blue-300 text-xs font-bold font-mono border border-blue-200 dark:border-blue-800">۱۳۹۹ - اکنون</span>
                     </div>
                     <div class="text-sm font-bold text-accent dark:text-blue-400 mb-3">آژانس دیجیتال مارکتینگ اینتن (Inten Marketing Agency)</div>
@@ -109,7 +109,7 @@
                         <h3 class="text-lg sm:text-xl font-black text-textMain dark:text-white">طراحی معماری سئو و تیونینگ پورتال «لواسانی موتورز»</h3>
                         <span class="px-3 py-1 rounded-full bg-amber-50 dark:bg-amber-950/40 text-amber-900 dark:text-amber-300 text-xs font-bold font-mono border border-amber-200 dark:border-amber-800">کیس‌استادی شاخص خودرویی</span>
                     </div>
-                    <div class="text-sm font-bold text-accent dark:text-blue-400 mb-3">پروژه تخصصی خدمات و نمایندگی خودرویی</div>
+                    <div class="text-sm font-bold text-accent dark:text-blue-400 mb-3">پروژه خدمات و نمایندگی خودرویی</div>
                     <p class="text-slate-700 dark:text-slate-300 text-xs sm:text-sm leading-relaxed mb-4 text-justify font-normal">
                         اجرای استراتژی دوگانه سئوی لوکال و تکنیکال برای جذب خریداران و مراجعین واقعی، پیاده‌سازی اسکیماهای چندلایه‌ای AutoDealer و LocalBusiness، پاکسازی خطاهای شدید LCP/CLS و دستیابی به رتبه‌های برتر عبارات پررقابت در نتایج سرچ گوگل.
                     </p>
@@ -158,46 +158,54 @@
             <p class="text-slate-600 dark:text-slate-400 text-sm mt-2">ابزارهایی که با آن‌ها کدهای تمیز و ماشین‌های رتبه‌گیری می‌سازم</p>
         </div>
 
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
             
-            <div class="p-5 rounded-2xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 hover:border-accent transition-all duration-300 text-center group shadow-sm">
-                <div class="w-12 h-12 mx-auto rounded-xl bg-slate-100 dark:bg-slate-700 text-accent dark:text-blue-400 flex items-center justify-center text-2xl mb-3 group-hover:scale-110 transition-transform">
-                    <i class="fab fa-wordpress"></i>
+            <div class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 hover:border-accent transition-all duration-300 text-center group shadow-sm">
+                <div class="w-10 h-10 mx-auto rounded-xl bg-slate-100 dark:bg-slate-700 text-accent dark:text-blue-400 flex items-center justify-center text-xl mb-2 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-chart-line"></i>
                 </div>
-                <h3 class="text-sm font-bold text-textMain dark:text-white mb-1">WordPress Core</h3>
-                <p class="text-[11px] text-slate-500 dark:text-slate-400">توسعه تمپلیت، CPTs و هوک‌ها</p>
+                <h3 class="text-xs font-bold text-textMain dark:text-white mb-1">SEO & CRO</h3>
+                <p class="text-[10px] text-slate-500 dark:text-slate-400">بهینه‌سازی نرخ تبدیل و رتبه</p>
             </div>
 
-            <div class="p-5 rounded-2xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 hover:border-accent transition-all duration-300 text-center group shadow-sm">
-                <div class="w-12 h-12 mx-auto rounded-xl bg-slate-100 dark:bg-slate-700 text-accent dark:text-blue-400 flex items-center justify-center text-2xl mb-3 group-hover:scale-110 transition-transform">
-                    <i class="fab fa-php"></i>
+            <div class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 hover:border-accent transition-all duration-300 text-center group shadow-sm">
+                <div class="w-10 h-10 mx-auto rounded-xl bg-slate-100 dark:bg-slate-700 text-accent dark:text-blue-400 flex items-center justify-center text-xl mb-2 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-robot"></i>
                 </div>
-                <h3 class="text-sm font-bold text-textMain dark:text-white mb-1">PHP 8.2+ MVC</h3>
-                <p class="text-[11px] text-slate-500 dark:text-slate-400">کدنویسی شی‌گرا و سریع</p>
+                <h3 class="text-xs font-bold text-textMain dark:text-white mb-1 font-mono">Agentic Workflows</h3>
+                <p class="text-[10px] text-slate-500 dark:text-slate-400">اتوماسیون با ایجنت‌های هوشمند</p>
             </div>
 
-            <div class="p-5 rounded-2xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 hover:border-accent transition-all duration-300 text-center group shadow-sm">
-                <div class="w-12 h-12 mx-auto rounded-xl bg-slate-100 dark:bg-slate-700 text-accent dark:text-blue-400 flex items-center justify-center text-2xl mb-3 group-hover:scale-110 transition-transform">
-                    <i class="fab fa-css3-alt"></i>
+            <div class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 hover:border-accent transition-all duration-300 text-center group shadow-sm">
+                <div class="w-10 h-10 mx-auto rounded-xl bg-slate-100 dark:bg-slate-700 text-accent dark:text-blue-400 flex items-center justify-center text-xl mb-2 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-laptop-code"></i>
                 </div>
-                <h3 class="text-sm font-bold text-textMain dark:text-white mb-1">Tailwind CSS</h3>
-                <p class="text-[11px] text-slate-500 dark:text-slate-400">طراحی مدرن و ریسپانسیو</p>
+                <h3 class="text-xs font-bold text-textMain dark:text-white mb-1 font-mono">Vibe Coding</h3>
+                <p class="text-[10px] text-slate-500 dark:text-slate-400">توسعه سریع با AI و ابزارها</p>
             </div>
 
-            <div class="p-5 rounded-2xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 hover:border-accent transition-all duration-300 text-center group shadow-sm">
-                <div class="w-12 h-12 mx-auto rounded-xl bg-slate-100 dark:bg-slate-700 text-accent dark:text-blue-400 flex items-center justify-center text-2xl mb-3 group-hover:scale-110 transition-transform">
+            <div class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 hover:border-accent transition-all duration-300 text-center group shadow-sm">
+                <div class="w-10 h-10 mx-auto rounded-xl bg-slate-100 dark:bg-slate-700 text-accent dark:text-blue-400 flex items-center justify-center text-xl mb-2 group-hover:scale-110 transition-transform">
                     <i class="fas fa-brain"></i>
                 </div>
-                <h3 class="text-sm font-bold text-textMain dark:text-white mb-1">Gemini & LLMs</h3>
-                <p class="text-[11px] text-slate-500 dark:text-slate-400">مهندسی پرامپت و اتوماسیون</p>
+                <h3 class="text-xs font-bold text-textMain dark:text-white mb-1 font-mono">GEO & AEO</h3>
+                <p class="text-[10px] text-slate-500 dark:text-slate-400">دیده‌شدن در چت‌بات‌ها و AI</p>
             </div>
 
-            <div class="p-5 rounded-2xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 hover:border-accent transition-all duration-300 text-center group shadow-sm">
-                <div class="w-12 h-12 mx-auto rounded-xl bg-slate-100 dark:bg-slate-700 text-accent dark:text-blue-400 flex items-center justify-center text-2xl mb-3 group-hover:scale-110 transition-transform">
-                    <i class="fas fa-server"></i>
+            <div class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 hover:border-accent transition-all duration-300 text-center group shadow-sm">
+                <div class="w-10 h-10 mx-auto rounded-xl bg-slate-100 dark:bg-slate-700 text-accent dark:text-blue-400 flex items-center justify-center text-xl mb-2 group-hover:scale-110 transition-transform">
+                    <i class="fab fa-php"></i>
                 </div>
-                <h3 class="text-sm font-bold text-textMain dark:text-white mb-1">LiteSpeed & Redis</h3>
-                <p class="text-[11px] text-slate-500 dark:text-slate-400">کانفیگ کش سرور و تیونینگ</p>
+                <h3 class="text-xs font-bold text-textMain dark:text-white mb-1">PHP & WordPress</h3>
+                <p class="text-[10px] text-slate-500 dark:text-slate-400">توسعه تمپلیت، CPTs و API</p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 hover:border-accent transition-all duration-300 text-center group shadow-sm">
+                <div class="w-10 h-10 mx-auto rounded-xl bg-slate-100 dark:bg-slate-700 text-accent dark:text-blue-400 flex items-center justify-center text-xl mb-2 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3 class="text-xs font-bold text-textMain dark:text-white mb-1">Core Web Vitals</h3>
+                <p class="text-[10px] text-slate-500 dark:text-slate-400">تیونینگ سرعت و سئو تکنیکال</p>
             </div>
 
         </div>
@@ -212,7 +220,7 @@
         <div class="text-center max-w-2xl mx-auto mb-8 space-y-3">
             <h2 class="text-2xl sm:text-3xl font-black text-white">ارتباط مستقیم</h2>
             <p class="text-slate-300 font-medium text-xs sm:text-sm leading-relaxed">
-                برای بررسی وضعیت سئوی سایت شما، مشاوره تخصصی و شروع همکاری، می‌توانید از طریق راه‌های زیر مستقیماً با من در ارتباط باشید.
+                برای بررسی وضعیت سئوی سایت شما، مشاوره و شروع همکاری، می‌توانید از طریق راه‌های زیر مستقیماً با من در ارتباط باشید.
             </p>
         </div>
 
@@ -314,7 +322,7 @@
 <!-- ========================================================================= -->
 <!-- بخش ۵: دکمه CTA نهایی (هدایت به صفحه شروع همکاری)                    -->
 <!-- ========================================================================= -->
-<section class="pb-16">
+<section class="mb-12 sm:mb-16">
     <div class="max-w-5xl mx-auto px-4 sm:px-6">
         <div class="rounded-3xl p-8 sm:p-12 bg-accent text-white border border-blue-900 text-center relative overflow-hidden shadow-xl">
             <div class="relative z-10 max-w-2xl mx-auto space-y-6">
