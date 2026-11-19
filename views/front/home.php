@@ -11,7 +11,7 @@
                     <div class="flex items-center gap-3 flex-wrap">
                         <div class="inline-flex items-center px-4 py-2 rounded-full bg-white dark:bg-slate-800 text-textMain dark:text-slate-200 text-sm font-bold shadow-sm border border-gray-200 dark:border-slate-700">
                             <span class="flex w-2.5 h-2.5 rounded-full bg-accent ml-2 animate-pulse"></span>
-                            <span>محمد مفتخری (Mohammad Moftakhari) | کارشناس و استراتژیست سئو</span>
+                            <span>محمد مفتخری (Mohammad Moftakhari) | Mid-level SEO & CRO | GEO & Agentic Workflows</span>
                         </div>
 
                         <!-- Trust Rating Badge -->
@@ -44,19 +44,19 @@
                         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-textMain dark:text-white leading-[1.3]">
                             سلام ارادت، من <span class="text-accent dark:text-blue-400">محمد مفتخری</span> هستم
                         </h1>
-                        <p class="text-xs sm:text-sm font-bold text-slate-500 dark:text-slate-400 mt-1" dir="ltr">
-                            Mohammad Moftakhari (Rostamkhani) — Senior Technical SEO & AI Architect
+                        <p class="text-xs sm:text-sm font-bold text-slate-500 dark:text-slate-400 mt-1 font-mono" dir="ltr">
+                            Mohammad Moftakhari — Mid-level SEO & CRO | GEO, AEO & Agentic Workflows | Vibe Coding
                         </p>
                     </div>
                     
-                    <h2 id="hero-subtitle" class="text-2xl sm:text-3xl font-bold text-gray-700 dark:text-gray-300 transition-all duration-300">
-                        <span class="font-black text-accent dark:text-blue-400 inline-block" dir="ltr">Modern SEO & GEO</span>
+                    <h2 id="hero-subtitle" class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-700 dark:text-gray-300 transition-all duration-300">
+                        <span class="font-black text-accent dark:text-blue-400 inline-block font-mono" dir="ltr">Mid-level SEO & CRO | GEO, AEO & Agentic Workflows | Vibe Coding</span>
                     </h2>
                     
                     <!-- Dynamic Persona Pitch -->
                     <div id="hero-pitch" class="transition-all duration-300">
                         <p id="hero-pitch-text" class="text-base sm:text-lg text-gray-700 dark:text-gray-300 mb-6 sm:mb-10 leading-loose max-w-2xl text-justify font-normal">
-                            از <strong>سال ۱۳۹۹</strong> در حوزه سئو در <a href="https://inten.asia" target="_blank" rel="noopener" class="text-accent dark:text-blue-400 font-bold hover:underline">آژانس دیجیتال مارکتینگ اینتن</a> فعالیت می‌کنم. تمرکز من بر طراحی و اجرای استراتژی‌های سئو با هدف <strong>جذب ترافیک هدفمند، افزایش مشتری و کمک به رشد فروش کسب‌وکارهاست</strong>.
+                            <strong>سئو و بهینه‌سازی نرخ تبدیل (CRO)، رشد ارگانیک و افزایش فروش در نسل جدید جستجو هوش مصنوعی.</strong> با بیش از ۶ سال سابقه در <a href="https://inten.asia" target="_blank" rel="noopener" class="text-accent dark:text-blue-400 font-bold hover:underline">آژانس دیجیتال مارکتینگ اینتن</a>، تمرکز من بر تبدیل ورودی‌های موتورهای جستجو به مشتریان دست‌به‌نقد، بهینه‌سازی فنی و معماری داده برای موتورهای پاسخ‌دهی (GEO & AEO)، طراحی گردش‌کارهای ایجنتی و وایب کدینگ جهت رشد ملموس درآمد کسب‌وکارهاست.
                         </p>
                     </div>
                     
@@ -80,11 +80,11 @@
                     
                     <!-- Profile Card with Real Photo -->
                     <div class="relative z-10 w-64 h-72 sm:w-80 sm:h-96 lg:w-96 lg:h-[420px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800 bg-slate-900 group">
-                        <img src="/assets/images/mohammadmoftakhari.webp" alt="محمد مفتخری (Mohammad Moftakhari) - کارشناس سئو و متخصص هوش مصنوعی" width="640" height="640" loading="lazy" decoding="async" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                        <img src="/assets/images/mohammadmoftakhari.webp" alt="محمد مفتخری (Mohammad Moftakhari) - کارشناس سئو و بهینه‌سازی نرخ تبدیل (CRO)" width="640" height="640" loading="lazy" decoding="async" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/30 to-transparent flex flex-col justify-end p-5 sm:p-7 text-white">
                             <h3 class="text-2xl sm:text-3xl font-black text-white drop-shadow-md">محمد مفتخری</h3>
                             <p class="text-xs text-blue-300 font-bold mt-0.5 font-mono" dir="ltr">Mohammad Moftakhari (maaadmr)</p>
-                            <span class="text-xs text-slate-200 mt-1 font-medium">کارشناس و استراتژیست ارشد سئو</span>
+                            <span class="text-xs text-slate-200 mt-1 font-medium font-mono" dir="ltr">Mid-level SEO & CRO | GEO & Agentic Workflows</span>
                         </div>
                     </div>
                     
@@ -493,7 +493,7 @@
                             <div class="p-4 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-200 dark:border-slate-700 space-y-1">
                                 <h3 class="text-sm sm:text-base font-black text-gray-700 dark:text-slate-200">شروع فعالیت حرفه‌ای در آژانس دیجیتال مارکتینگ اینتن</h3>
                                 <p class="text-xs text-gray-500 dark:text-slate-400 leading-relaxed">
-                                    آغاز مسیر تخصصی با تمرکز بر یادگیری عمیق الگوریتم‌های گوگل، سئو تکنیکال و رفتار خریداران در سرچ.
+                                    آغاز مسیر حرفه‌ای با تمرکز بر یادگیری عمیق الگوریتم‌های گوگل، سئو تکنیکال و رفتار خریداران در سرچ.
                                 </p>
                             </div>
                         </div>
@@ -545,7 +545,7 @@
                                     <i class="fas fa-toolbox text-blue-400"></i>
                                     <span>ابزارهای تحلیلی و اجرایی روزانه:</span>
                                 </p>
-                                <span class="text-[10px] font-bold text-cyan-400 bg-cyan-500/10 px-2.5 py-0.5 rounded-full border border-cyan-500/20">تخصصی و به‌روز</span>
+                                <span class="text-[10px] font-bold text-cyan-400 bg-cyan-500/10 px-2.5 py-0.5 rounded-full border border-cyan-500/20">حرفه‌ای و به‌روز</span>
                             </div>
 
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
@@ -870,7 +870,7 @@
             <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12 space-y-3 sm:space-y-4">
                 <h2 class="text-2xl sm:text-4xl md:text-5xl font-black text-white">ارتباط مستقیم</h2>
                 <p class="text-gray-300 font-medium text-xs sm:text-base leading-relaxed">
-                    برای بررسی وضعیت سئوی سایت شما، مشاوره تخصصی و شروع همکاری، می‌توانید از طریق راه‌های زیر مستقیماً با من در ارتباط باشید.
+                    برای بررسی وضعیت سئوی سایت شما، مشاوره و شروع همکاری، می‌توانید از طریق راه‌های زیر مستقیماً با من در ارتباط باشید.
                 </p>
             </div>
 
@@ -991,16 +991,16 @@
                 if (personaBtnTech) personaBtnTech.className = 'persona-tab active-persona px-4 py-2 rounded-xl text-xs font-black transition-all flex items-center gap-2 bg-accent dark:bg-blue-600 text-white shadow-md';
                 if (personaBtnBusiness) personaBtnBusiness.className = 'persona-tab px-4 py-2 rounded-xl text-xs font-bold text-gray-700 dark:text-gray-300 hover:text-accent transition-all flex items-center gap-2';
                 
-                heroSubtitle.innerHTML = '<span class="font-black text-accent dark:text-blue-400 inline-block" dir="ltr">Technical SEO & Data Architecture</span>';
-                heroPitchText.innerHTML = 'فعالیت در <strong>سئو تکنیکال، معماری اطلاعات، وایب کدینگ و توسعه اسکریپت‌های تحلیلی با AI، بهینه‌سازی Core Web Vitals (INP/LCP) و اسکیماهای JSON-LD</strong>؛ با ۶ سال سابقه فعالیت در <a href="https://inten.asia" target="_blank" rel="noopener" class="text-accent dark:text-blue-400 font-bold hover:underline">آژانس اینتن</a>.';
+                heroSubtitle.innerHTML = '<span class="font-black text-accent dark:text-blue-400 inline-block font-mono" dir="ltr">GEO, AEO & Agentic Workflows | Vibe Coding</span>';
+                heroPitchText.innerHTML = 'تمرکز بر <strong>گردش‌کارهای ایجنتی (Agentic Workflows)، وایب کدینگ (Vibe Coding) و توسعه اسکریپت‌های تحلیلی هوش مصنوعی</strong>؛ بهینه‌سازی فنی موتورهای پاسخ‌دهی (GEO & AEO)، پیاده‌سازی اسکیماهای ساخت‌یافته و دیباگ و بهینه‌سازی Core Web Vitals (INP/LCP) با ۶ سال سابقه در <a href="https://inten.asia" target="_blank" rel="noopener" class="text-accent dark:text-blue-400 font-bold hover:underline">آژانس اینتن</a>.';
                 heroPrimaryCtaText.innerText = 'بررسی چک‌لیست تکنیکال سئو';
                 try { localStorage.setItem('user_persona', 'tech'); } catch (e) {}
             } else {
                 if (personaBtnBusiness) personaBtnBusiness.className = 'persona-tab active-persona px-4 py-2 rounded-xl text-xs font-black transition-all flex items-center gap-2 bg-accent dark:bg-blue-600 text-white shadow-md';
                 if (personaBtnTech) personaBtnTech.className = 'persona-tab px-4 py-2 rounded-xl text-xs font-bold text-gray-700 dark:text-gray-300 hover:text-accent transition-all flex items-center gap-2';
                 
-                heroSubtitle.innerHTML = '<span class="font-black text-accent dark:text-blue-400 inline-block" dir="ltr">Modern SEO & GEO</span>';
-                heroPitchText.innerHTML = 'از <strong>سال ۱۳۹۹</strong> در حوزه سئو در <a href="https://inten.asia" target="_blank" rel="noopener" class="text-accent dark:text-blue-400 font-bold hover:underline">آژانس دیجیتال مارکتینگ اینتن</a> فعالیت می‌کنم. تمرکز من بر طراحی و اجرای استراتژی‌های سئو با هدف <strong>جذب ترافیک هدفمند، افزایش مشتری و کمک به رشد فروش کسب‌وکارهاست</strong>.';
+                heroSubtitle.innerHTML = '<span class="font-black text-accent dark:text-blue-400 inline-block font-mono" dir="ltr">Mid-level SEO & CRO | GEO & Agentic Workflows</span>';
+                heroPitchText.innerHTML = '<strong>سئو و بهینه‌سازی نرخ تبدیل (CRO)، رشد ارگانیک و افزایش فروش در نسل جدید جستجو هوش مصنوعی.</strong> با بیش از ۶ سال سابقه در <a href="https://inten.asia" target="_blank" rel="noopener" class="text-accent dark:text-blue-400 font-bold hover:underline">آژانس دیجیتال مارکتینگ اینتن</a>، تمرکز من بر تبدیل ورودی‌های موتورهای جستجو به مشتریان دست‌به‌نقد، بهینه‌سازی فنی و معماری داده برای موتورهای پاسخ‌دهی (GEO & AEO)، طراحی گردش‌کارهای ایجنتی و وایب کدینگ جهت رشد ملموس درآمد کسب‌وکارهاست.';
                 heroPrimaryCtaText.innerText = 'تکمیل بریف هوشمند سئو';
                 try { localStorage.setItem('user_persona', 'business'); } catch (e) {}
             }
