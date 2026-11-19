@@ -18,22 +18,27 @@
 <!-- ========================================================================= -->
 <!-- بخش ۱: Hero Section (مگنت اصلی و قلاب شروع مکالمه)                     -->
 <!-- ========================================================================= -->
-<section class="text-center pt-6 pb-2 max-w-3xl mx-auto px-4 sm:px-6">
-    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-slate-800 text-textMain dark:text-slate-200 text-xs sm:text-sm font-bold shadow-sm border border-gray-200 dark:border-slate-700 mb-6">
+<section class="text-center pt-6 pb-8 max-w-3xl mx-auto px-4 sm:px-6">
+    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-slate-800 text-textMain dark:text-slate-200 text-xs sm:text-sm font-bold shadow-sm border border-gray-200 dark:border-slate-700 mb-5">
         <span class="w-2.5 h-2.5 rounded-full bg-accent animate-pulse"></span>
-        <span>پایپ‌لاین ارتباط هوشمند و تحلیل لیدها</span>
+        <span>درخواست مشاوره و شروع همکاری</span>
     </div>
 
-    <!-- تیتر مگنت اصلی -->
-    <h1 class="text-3xl sm:text-5xl font-black text-textMain dark:text-white leading-tight mb-5">
-        قبل از جلسه، اجازه بده سایتت را <br class="hidden sm:inline">
+    <!-- تیتر اصلی صفحه تماس -->
+    <h1 class="text-3xl sm:text-5xl font-black text-textMain dark:text-white leading-tight mb-4">
+        ارتباط با محمد مفتخری | <br class="hidden sm:inline">
         <span class="text-accent dark:text-blue-400">
-            با هوش مصنوعی آنالیز کنم
+            مشاوره سئو و رشد فروش
         </span>
     </h1>
 
     <p class="text-slate-700 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
-        وقت شما و من ارزشمند است. فرم ۳ مرحله‌ای زیر را تکمیل کنید تا با دیتای آماده، بررسی دقیق سرعت و راهکار مشخص در جلسه حاضر شوم.
+        وقت شما و من ارزشمند است. برای بررسی دقیق وضعیت وب‌سایت، سئو و بهینه‌سازی نرخ تبدیل (CRO)، فرم ۳ مرحله‌ای زیر را تکمیل فرمایید تا با تحلیل اولیه داده‌ها و راهکار مشخص در جلسه حاضر شوم.
+    </p>
+
+    <!-- معرفی کوتاه موقعیت حرفه‌ای -->
+    <p class="text-xs text-slate-500 dark:text-slate-400 mt-3 font-mono font-bold" dir="ltr">
+        Mohammad Moftakhari — Mid-level SEO & CRO | GEO, AEO & Agentic Workflows | Vibe Coding
     </p>
 </section>
 
@@ -236,7 +241,7 @@
         <div class="text-center max-w-2xl mx-auto mb-8 space-y-3">
             <h2 class="text-2xl sm:text-3xl font-black text-white">ارتباط مستقیم</h2>
             <p class="text-slate-300 font-medium text-xs sm:text-sm leading-relaxed">
-                برای بررسی وضعیت سئوی سایت شما، مشاوره تخصصی و شروع همکاری، می‌توانید از طریق راه‌های زیر مستقیماً با من در ارتباط باشید.
+                برای بررسی وضعیت سئوی سایت شما، مشاوره و شروع همکاری، می‌توانید از طریق راه‌های زیر مستقیماً با من در ارتباط باشید.
             </p>
         </div>
 
