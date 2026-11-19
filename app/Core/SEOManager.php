@@ -19,7 +19,7 @@ class SEOManager
     {
         $siteUrl = url('/');
         $name = (string)SiteSetting::get('entity_name', 'محمد مفتخری');
-        $jobTitle = (string)SiteSetting::get('entity_job_title', 'کارشناس ارشد سئو (SEO Specialist) و معمار هوش مصنوعی');
+        $jobTitle = (string)SiteSetting::get('entity_job_title', 'Mid-level SEO & CRO | GEO, AEO & Agentic Workflows | Vibe Coding');
         $phone = (string)SiteSetting::get('contact_phone', '09302928001');
 
         $sameAs = array_values(array_filter([
@@ -61,16 +61,18 @@ class SEOManager
             ],
             'knowsAbout'    => [
                 'Search Engine Optimization (SEO)',
-                'Technical SEO & Core Web Vitals',
                 'Conversion Rate Optimization (CRO)',
                 'Generative Engine Optimization (GEO & AEO)',
+                'Agentic Workflows & AI Automation',
+                'Vibe Coding & Rapid Prototyping',
+                'Technical SEO & Core Web Vitals',
                 'Model Context Protocol (MCP) & AI Integration',
-                'سئو تکنیکال',
-                'استراتژی سئو',
-                'اتوماسیون هوش مصنوعی',
+                'سئو تکنیکال و بهینه‌سازی نرخ تبدیل (CRO)',
+                'رشد ارگانیک و افزایش فروش با هوش مصنوعی',
+                'اتوماسیون ایجنتی و وایب کدینگ',
                 'معماری اطلاعات و سیلوی محتوایی'
             ],
-            'description'   => 'محمد مفتخری (Mohammad Moftakhari)، کارشناس ارشد و استراتژیست سئو با بیش از ۶ سال تجربه در بهینه‌سازی فنی، ساختاردهی وب‌سایت‌های سازمانی، اتوماسیون هوش مصنوعی و رشد فروش در آژانس اینتن.'
+            'description'   => 'محمد مفتخری (Mohammad Moftakhari) — Mid-level SEO & CRO | GEO, AEO & Agentic Workflows | Vibe Coding. سئو و بهینه‌سازی نرخ تبدیل (CRO)، رشد ارگانیک و افزایش فروش در نسل جدید جستجو هوش مصنوعی با ۶ سال سابقه در آژانس دیجیتال مارکتینگ اینتن.'
         ];
     }
 
@@ -363,7 +365,7 @@ class SEOManager
             'url'             => $siteUrl,
             'name'            => 'محمد مفتخری | Mohammad Moftakhari',
             'alternateName'   => ['Mohammad Moftakhari', 'Mohammad Moftakhar', 'Mohammad Moftakhari Rostamkhani', 'محمد مفتخری سئو', 'maaadmr', 'maaad_mr'],
-            'description'     => 'وب‌سایت رسمی محمد مفتخری (Mohammad Moftakhari)، متخصص سئو، مشاور استراتژی رشد و معمار سیستم‌های هوش مصنوعی سازمانی.',
+            'description'     => 'وب‌سایت رسمی محمد مفتخری (Mohammad Moftakhari)، کارشناس Mid-level SEO & CRO، مشاور رشد ارگانیک و بهینه‌سازی نرخ تبدیل.',
             'inLanguage'      => ['fa-IR', 'en-US'],
             'creator'         => [
                 '@id' => $siteUrl . '#person'
