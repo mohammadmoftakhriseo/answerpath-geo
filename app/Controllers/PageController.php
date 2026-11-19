@@ -28,8 +28,8 @@ class PageController extends Controller
             '@type'       => 'AboutPage',
             '@id'         => $pageUrl . '#webpage',
             'url'         => $pageUrl,
-            'name'        => 'درباره محمد مفتخری (Mohammad Moftakhari) | متخصص سئو و معمار هوش مصنوعی',
-            'description' => 'آشنایی با سوابق، تخصص‌ها، تجربیات کاری و فلسفه سئوی داده‌محور محمد مفتخری (Mohammad Moftakhari)، مدیر پروژه و کارشناس ارشد سئو در آژانس دیجیتال مارکتینگ اینتن.',
+            'name'        => 'درباره محمد مفتخری (Mohammad Moftakhari) | سوابق و رویکرد سئو و CRO',
+            'description' => 'آشنایی با سوابق، تجربیات کاری و رویکرد سئوی داده‌محور محمد مفتخری (Mohammad Moftakhari)، کارشناس سئو در آژانس دیجیتال مارکتینگ اینتن.',
             'mainEntity'  => SEOManager::getPersonSchema(),
         ];
 
@@ -45,8 +45,8 @@ class PageController extends Controller
 
         $schemaJsonLd = SEOManager::renderJsonLd($schemas);
 
-        $pageTitle = !empty($page['seo_title']) ? $page['seo_title'] : 'درباره محمد مفتخری (Mohammad Moftakhari) | رزومه و تخصص سئو';
-        $pageDesc = !empty($page['meta_description']) ? $page['meta_description'] : 'سوابق حرفه‌ای، دستاوردها و تجربیات محمد مفتخری (Mohammad Moftakhari)، متخصص ارشد سئو و مدیر پروژه در آژانس دیجیتال مارکتینگ اینتن.';
+        $pageTitle = !empty($page['seo_title']) ? $page['seo_title'] : 'درباره محمد مفتخری | سئو و بهینه‌سازی نرخ تبدیل (CRO)، رشد ارگانیک و افزایش فروش';
+        $pageDesc = !empty($page['meta_description']) ? $page['meta_description'] : 'درباره محمد مفتخری؛ فعال در سئو و بهینه‌سازی نرخ تبدیل (CRO)، رشد ارگانیک و افزایش فروش کسب‌وکارها در نسل جدید جستجوی وب و هوش مصنوعی.';
 
         $this->render('front/about', [
             'title'        => $pageTitle,
